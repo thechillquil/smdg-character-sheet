@@ -1168,8 +1168,7 @@
                                             &nbsp;
                                         </td>
                                         <td>
-                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo"
-                                            value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity} @{inventory-equipmenttype}}} {{Range= @{inventory-equipmentrange}}} {{Accuracy=[[@{inventory-equipmentattacktype}]] [[@{inventory-equipmentattacktype}]]}} {{Damage=[[@{inventory-equipmentdice}]] [[@{inventory-equipmentdice}]]}} {{desc=@{inventory-list1}}}">
+                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo" value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity} @{inventory-equipmenttype}}} {{Range= @{inventory-equipmentrange}}} {{Accuracy=[[@{inventory-equipmentattacktype}]] [[@{inventory-equipmentattacktype}]]}} {{Damage=[[@{inventory-equipmentdice}]] [[@{inventory-equipmentdice}]]}} {{desc=@{inventory-list1}}}">
                                         </td>
                                         <td>
                                             <input type="checkbox"/>
@@ -1179,47 +1178,6 @@
                                     <tr width=100%>
                                         <td>
                                             &nbsp;
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=40%>
-                                            <select name="attr_inventory-equipmentattacktype" class="ptype">
-                                                <option value="">No attack</option>
-                                                <option value="[[3d6 + 2]]">Finesse</option>
-                                                <option value="[[3d6]]">Default</option>
-                                                <option value="[[3d6 - 2]]">Brute</option>
-                                            </select>
-                                        </td>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=60%>
-                                            <input type="text" name="attr_inventory-equipmentdice" value="1d0"/>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=40%>
-                                            <label style="background-color:#bfbfbf; text-align:center;">Number Held:</label>
-                                        </td>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=60%>
-                                            <textarea name="attr_inventory-list1" style="height:60%;">Equipment description.</textarea>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=45%>
-                                            <input type="number" name="attr_inventory-numberheld" value="1"/>
-                                        </td>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=30%>
-                                            &nbsp;
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=30%>
-                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo" value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity} @{inventory-equipmenttype}}} {{Accuracy=[[@{inventory-equipmentattacktype}]] [[@{inventory-equipmentattacktype}]]}} {{Damage=[[@{inventory-equipmentdice}]] [[@{inventory-equipmentdice}]]}} {{desc=@{inventory-list1}}}">
-                                        </td>
-                                        <td style = "padding-left:5%; padding-right:5%;" width=30%>
-                                            <input type="checkbox"/>
                                         </td>
                                     </tr>
 
