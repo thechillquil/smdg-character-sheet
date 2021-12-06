@@ -1,0 +1,1070 @@
+
+
+
+
+/* Ctrl + F for "Swap Style Helper" to swap to Hero, Villain or Rogue sheets */
+
+
+
+
+/* CSS Reset */{}
+.charsheet .sheet-wrapper div, .charsheet .sheet-wrapper span, .charsheet .sheet-wrapper label,
+.charsheet .sheet-wrapper h1, .charsheet .sheet-wrapper h2, .charsheet .sheet-wrapper h3, .charsheet .sheet-wrapper h4, .charsheet .sheet-wrapper h5, .charsheet .sheet-wrapper h6, .charsheet .sheet-wrapper p,
+.charsheet .sheet-wrapper table, .charsheet .sheet-wrapper caption, .charsheet .sheet-wrapper tbody, .charsheet .sheet-wrapper tfoot, .charsheet .sheet-wrapper thead, .charsheet .sheet-wrapper tr, .charsheet .sheet-wrapper th, .charsheet .sheet-wrapper td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    color: #000000; /* original was #404040, dark grey, think this might be for the text? */
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* tab stuff */
+/*----------- Tabs Setup -------------*/
+
+.charsheet {
+    width:99% - 15px; /* 840px was what this was before */
+}
+
+div.sheet-core-content { 
+    display: none; 
+    width:99% - 15px; /* 840px was what this was before */
+}
+.charsheet div[class^="sheet-section"] {
+    display: none;
+    background-size:99% - 15px; /* 840px was what this was before */
+}
+
+.charsheet input.sheet-tab1:checked ~ div.sheet-section-1,
+.charsheet input.sheet-tab2:checked ~ div.sheet-section-2,
+.charsheet input.sheet-tab3:checked ~ div.sheet-section-3,
+.charsheet input.sheet-tab4:checked ~ div.sheet-section-4,
+.charsheet input.sheet-tab5:checked ~ div.sheet-section-5,
+.charsheet input.sheet-tab6:checked ~ div.sheet-section-6,
+.charsheet input.sheet-tab7:checked ~ div.sheet-section-7,
+.charsheet input.sheet-tab8:checked ~ div.sheet-section-8,
+.charsheet input.sheet-tab9:checked ~ div.sheet-section-9,
+.charsheet input.sheet-tab20:checked ~ div.sheet-section-20,
+.charsheet input.sheet-tab21:checked ~ div.sheet-section-21 {
+    display: block;
+}
+
+.charsheet input.sheet-tab99:checked ~ div[class^="sheet-section"] {
+    display: block;
+}
+
+.charsheet input.sheet-tab {
+    width: 100px;
+    height: 20px;
+    cursor: pointer;    
+    position: relative;
+    opacity: 1.0; /* default was 0 */
+    z-index: 998; /* default was 998 */
+    box-shadow: 0px 0px 5px blue;
+}
+
+
+
+
+
+
+.repcontainer[data-groupname="repeating_skills"] > .repitem {
+    display: inline-block;
+}
+
+
+
+
+/* Swap Style Helper */
+
+.charsheet span.sheet-tab {
+    text-align: center;
+    display: inline-block; 
+    font-size: 100%;    /* 13px was the default originally */
+    background-image: url(https://c.tenor.com/L6k7nvo3NzgAAAAd/persona5.gif);
+    background-repeat: repeat;
+	color: #ff0000; 
+	font-weight: bold;
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	border-radius: 4px;
+    border: 2px solid #08217F;
+	
+	width: calc(20% + 100px); 
+    height: 20px; 
+    cursor: pointer;	
+	position: relative;
+	vertical-align: middle;
+	margin-left: calc(0px - 60% - 55px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.charsheet input.sheet-tab1:checked + span.sheet-tab1,
+.charsheet input.sheet-tab2:checked + span.sheet-tab2,
+.charsheet input.sheet-tab3:checked + span.sheet-tab3,
+.charsheet input.sheet-tab4:checked + span.sheet-tab4,
+.charsheet input.sheet-tab5:checked + span.sheet-tab5,
+.charsheet input.sheet-tab6:checked + span.sheet-tab6,
+.charsheet input.sheet-tab99:checked + span.sheet-tab99 {
+    
+    background: #08217F;  /*originally ab8b57*/ /* change back to 08217F for blue */ 
+    color: white; /*originally white*/
+	border-radius: 4px;
+    border: 2px solid #08217F; /* change back to 7F2108 for red */ 
+}
+
+/*----------- End Tab Setup -----------*/
+/* tab stuff ends */
+
+
+.charsheet .sheet-wrapper table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.charsheet .sheet-wrapper input::-webkit-outer-spin-button,
+.charsheet .sheet-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*.charsheet .sheet-wrapper input[type="number"] {
+-moz-appearance: textfield;
+}*/
+
+.charsheet .sheet-wrapper textarea {
+  resize: none;
+}
+
+/* Button Reset */
+
+
+.charsheet .sheet-wrapper button[type="roll"]:before {
+    content: ""!important;
+    display: none;
+}
+
+.charsheet .sheet-wrapper button[type="roll"]{
+  background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904772824495960084/button_inactive.png); 
+  background-size: 48px 48px;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  border-style: none;
+  background-color: transparent;
+  margin-left: 5px;
+}
+
+.sheet-paragraph-box {
+	width: calc(100% - 16px);
+	height: 2em;
+}
+
+/* .charsheet .sheet-wrapper button[type="roll"],
+.charsheet .sheet-wrapper .sheet-btn {
+    width: 48px;
+    height:48px;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+	font-weight: none;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904772824495960084/button_inactive.png);
+	background-color: #000000;
+	border: none;
+	white-space: nowrap;
+	border-radius: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+} */
+
+
+.charsheet .sheet-wrapper button[type="roll"]:hover,
+.charsheet .sheet-wrapper .sheet-btn:hover,
+.charsheet .sheet-wrapper .sheet-hider input[type=checkbox]:checked ~ .sheet-btn {
+	background-color: transparent; /* original was #8C001A, colour used for buttons */
+	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904772837640904734/button_active.png);
+	background-repeat: no-repeat;
+	border-color: none; /* original was #8C001A */
+	background-position: 0;
+}
+
+
+
+
+
+
+
+.charsheet .sheet-wrapper .sheet-hider input[type=checkbox]:checked ~ .sheet-btn {
+	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
+}
+
+.charsheet .sheet-wrapper button[type="roll"] label,
+.charsheet .sheet-wrapper button[type="roll"] input {
+	height:24px;
+	line-height: 24px;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align:center;
+	width: 99%;
+	cursor: pointer;
+	background: none;
+	box-shadow: none;
+	transition: none;
+	border-radius: none;
+    border:none;
+}
+
+.charsheet .sheet-wrapper button[type="roll"] input {
+}
+
+.charsheet .sheet-wrapper button[type="roll"]:hover label,
+.charsheet .sheet-wrapper button[type="roll"]:hover input {
+	color: white;
+    border: none;
+}
+
+/* Main Styles */
+
+.charsheet {
+    background-color: #F0F0F0;   /* original was #ECECEC, exceptionally light grey, suspect this is the background colour */
+}
+
+
+
+
+
+
+
+
+/* IMPORTANT BELOW */
+
+/* To change to hero style sheets... */
+/* Top-most header is simply h3 */
+/* Lower header is renamed to h3villain */
+
+/* To change to villain style sheets... */
+/* Top-most sheet-box is renamed to h3hero */
+/* Lower sheet-box is simply h3 */
+
+
+
+/* Heroic blue header */
+.charsheet .sheet-wrapper h3 {
+    background-color:#800000; /* original was #3F0001, likely for extremely dark red used in banners. #00204f is a blueish color */
+    color:#fff;
+    padding:3px;
+	margin-bottom:5px;
+    font-size:18px;
+    font-weight:700;
+}
+
+
+/* Villainous red header */
+.charsheet .sheet-wrapper h3-villain {
+    background-color:#4F1000; /* original was #3F0001, likely for extremely dark red used in banners */
+    color:#fff;
+    padding:3px;
+	margin-bottom:5px;
+    font-size:18px;
+    font-weight:700;
+}
+
+
+
+.charsheet .sheet-wrapper h4 { /* for white text */
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+    background-color:#00204f; /* original was #3F0001, likely for extremely dark red used in banners */
+    color:#fff;
+    padding:3px;
+	margin-bottom 5px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.charsheet .sheet-wrapper h2 { /* for black text */
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+    background-color:#00204f; /* original was #3F0001, likely for extremely dark red used in banners */
+    color:#000;
+    padding:3px;
+	margin-bottom 5px;
+    font-size:14px;
+    font-weight:500;
+}
+
+
+.charsheet .sheet-wrapper h5 { /* for black text */
+    color:#d00;
+    font-weight:5000;
+}
+
+.charsheet .sheet-wrapper .sheet-colouredlabel-red { /* COLOUR Lime */
+    color:#d00;
+    font-weight:5000;
+}
+
+.charsheet .sheet-wrapper .sheet-colouredlabel-indigo { /* COLOUR Lime */
+    color:#a0c;
+    font-weight:5000;
+}
+
+
+
+
+.charsheet .sheet-wrapper .sheet-colouredheader-lime { /* COLOUR Lime */
+    background-color:#8BBE1B; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-pink { /* COLOUR Pink */
+    background-color:#F987C5; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-indigo { /* COLOUR Pink */
+    background-color:#6B50C4; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-green { /* COLOUR Pink */
+    background-color:#00AF00; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-purple { /* COLOUR Pink */
+    background-color:#A64394; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-blue { /* COLOUR Pink */
+    background-color:#00A0C4; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-orange { /* COLOUR Pink */
+    background-color:#F98C00; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-yellow { /* COLOUR Pink */
+    background-color:#FFD033; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-brown { /* COLOUR Pink */
+    background-color:#C88542; /* original was #654321, darker brown */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-red { /* COLOUR Pink */
+    background-color:#C4292B; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+.charsheet .sheet-wrapper .sheet-colouredheader-grey { /* COLOUR Pink */
+    background-color:#939393; /* original was #3F0001, likely for extremely dark red used in banners */
+}
+
+
+.charsheet .sheet-wrapper .sheet-colouredheader-attack { /* COLOUR Pink */
+    background-color: rgba(155, 0, 10, 0.75); /* original was #3F0001, likely for extremely dark red used in banners */
+}
+
+
+
+.charsheet .sheet-wrapper input, .charsheet .sheet-wrapper textarea, .charsheet .sheet-wrapper select, .charsheet .sheet-wrapper input[type="number"] {
+	display: inline-block;
+	border: 1px solid #aaa;
+	padding: 2px;
+	height: 24px;
+	width: 100%;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
+	margin: 0;
+	color: #555;
+	background-color: white;
+	vertical-align: middle;
+	cursor: auto;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: start;
+	
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border linear .2s,box-shadow linear .2s;
+	-moz-transition: border linear .2s,box-shadow linear .2s;
+	-ms-transition: border linear .2s,box-shadow linear .2s;
+	-o-transition: border linear .2s,box-shadow linear .2s;
+	transition: border linear .2s,box-shadow linear .2s;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	-webkit-writing-mode: horizontal-tb;
+}
+
+.charsheet .sheet-wrapper input:not([type='checkbox']) {
+	-webkit-appearance: textfield;
+}
+
+.charsheet .sheet-wrapper input[type="checkbox"] {
+	
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border linear .2s,box-shadow linear .2s;
+	-moz-transition: border linear .2s,box-shadow linear .2s;
+	-ms-transition: border linear .2s,box-shadow linear .2s;
+	-o-transition: border linear .2s,box-shadow linear .2s;
+	transition: border linear .2s,box-shadow linear .2s;
+}
+
+.charsheet .sheet-wrapper input[disabled],
+.charsheet .sheet-wrapper select[disabled],
+.charsheet .sheet-wrapper textarea[disabled],
+.charsheet .sheet-wrapper input[readonly],
+.charsheet .sheet-wrapper select[readonly],
+.charsheet .sheet-wrapper textarea[readonly] {
+    background-color: #e7e7e7;
+    border-color: #aaa;
+    cursor: not-allowed;
+}
+
+.charsheet .sheet-wrapper textarea {
+    width: 98%;
+    height: 90px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.charsheet .sheet-wrapper label {
+	display: inline-block;
+	width: 100%;
+	font-size: 12px;
+	text-align: left;
+	font-weight:700;
+	height: 22px;
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+.charsheet .sheet-wrapper .sheet-3colrow .sheet-col {
+	width: calc(33% - 3px) !important;
+	margin-right: 2px !important;
+}
+
+.charsheet .sheet-wrapper .sheet-3colrow .sheet-col:last-child {
+	margin-right: 0 !important;
+}
+
+.charsheet .sheet-wrapper .sheet-2colrow .sheet-col {
+	width: calc(50% - 3px) !important;
+	margin-right: 2px !important;
+}
+
+.charsheet .sheet-wrapper .sheet-2colrow .sheet-col:last-child {
+	margin-right: 0 !important;
+}
+
+
+
+
+
+/* IMPORTANT BELOW */
+
+/* To change to hero style sheets... */
+/* Top-most sheet-box is simply sheet-box */
+/* Lower sheet-box is renamed to sheet-box2 */
+
+/* To change to villain style sheets... */
+/* Top-most sheet-box is renamed to sheet-box2 */
+/* Lower sheet-box is simply sheet-box */
+
+
+
+
+
+
+
+/* Special Styles */ /* Heroic blue sheet boxes */
+.charsheet .sheet-wrapper .sheet-box {
+    padding: 5px;
+    margin-top:-5px;
+    border-top: 1px solid #00204f; /* original was #8C001A */ /* topmost part just under the header */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00204f), to(transparent)); /* original was #8c001a */
+    background-image: -webkit-linear-gradient(#00204f, transparent); /* original was #8c001a */
+    background-image:
+        -moz-linear-gradient(#00204f, transparent), /* original was #8C001A */ /*unsure where this part exists */
+        -moz-linear-gradient(#00204f, transparent) /* original was #8C001A */
+    ;
+    background-image:
+        -o-linear-gradient(#00204f, transparent), /* original was #8C001A */ /*unsure where this part exists */
+        -o-linear-gradient(#00204f, transparent) /* original was #8C001A */
+    ;
+    background-image: 
+        linear-gradient(#00204f, transparent), /* original was #8C001A and is the left-most tail */
+        linear-gradient(#00204f, transparent) /* original was #8C001A and is the right-most tail*/
+    ;
+    -moz-background-size:1px 100%;
+    background-size:1px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+}
+
+/* Special Styles */ /* Villainous red sheet boxes */
+.charsheet .sheet-wrapper .sheet-box2 {
+    padding: 5px;
+    margin-top:-5px;
+    border-top: 1px solid ##4F1000; /* original was #8C001A */ /* topmost part just under the header */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#4F1000)); /* original was #8c001a */
+    background-image: -webkit-linear-gradient(transparent, #4F1000); /* original was #8c001a */
+    background-image:
+        -moz-linear-gradient(transparent, #4F1000), /* original was #8C001A */ /*unsure where this part exists */
+        -moz-linear-gradient(transparent, #4F1000) /* original was #8C001A */
+    ;
+    background-image:
+        -o-linear-gradient(transparent, #4F1000), /* original was #8C001A */ /*unsure where this part exists */
+        -o-linear-gradient(transparent, #4F1000) /* original was #8C001A */
+    ;
+    background-image: 
+        linear-gradient(transparent, #4F1000), /* original was #8C001A and is the left-most tail */
+        linear-gradient(transparent, #4F1000) /* original was #8C001A and is the right-most tail*/
+    ;
+    -moz-background-size:1px 100%;
+    background-size:1px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.charsheet .sheet-wrapper .sheet-transparent {
+    background:transparent;
+    border:transparent;
+}
+
+.charsheet .sheet-wrapper .sheet-inline {
+	display:inline-block;
+}
+
+/* Rows and Items */
+
+.charsheet .sheet-wrapper .sheet-fiftypercent {
+    display:inline-block;
+	width: calc(50% - 3px) !important;
+	margin-right: 2px !important;
+}
+
+.charsheet .sheet-wrapper .sheet-fiftypercent:last-child {
+    display:inline-block;    
+	margin-right: 0 !important;
+}
+
+.charsheet .sheet-wrapper .sheet-sixtysixpercent {
+    width: calc(33% - 3px) !important;
+	margin-right: 2px !important;
+}
+
+.charsheet .sheet-wrapper .sheet-sixtysixypercent:last-child {
+	margin-right: 0 !important;
+}
+
+.charsheet .sheet-wrapper .sheet-thirtypercent {
+    width: calc(33% - 3px) !important;
+	margin-right: 2px !important;
+}
+
+.charsheet .sheet-wrapper .sheet-thirtypercent:last-child {
+	margin-right: 0 !important;
+}
+
+.charsheet .sheet-wrapper .sheet-sixteenpercent {
+    width: calc(16% - 3px) !important;
+    margin-right: 2px !important;
+}
+
+.charsheet .sheet-wrapper .sheet-sixteenpercent:last-child {
+	margin-right: 0 !important;
+}
+
+
+.charsheet .sheet-wrapper .sheet-row {
+    height: 28px;
+    margin: 0 0 2px;
+}
+.charsheet .sheet-wrapper .sheet-doublerow {
+    height: 48px;
+    margin: 0 0 2px;
+}
+
+.charsheet .sheet-wrapper .sheet-alternative:nth-child(even) {
+    background-color: #B0B0DD; /* original was #DBB0B1, a pale pink, unsure where it is used */
+}
+	.charsheet .sheet-wrapper .sheet-alternative:nth-child(even) input {
+    background-color: transparent;
+}
+
+.charsheet .sheet-wrapper .sheet-header {
+    height: 20px;
+    margin: 0;
+}
+
+.charsheet .sheet-wrapper .sheet-header label {
+    padding: 0;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.charsheet .sheet-wrapper .sheet-footer {
+    height: 20px;
+    margin-bottom: -5px;
+}
+
+.charsheet .sheet-wrapper .sheet-footer label {
+	padding: 0;
+	font-size: 10px;
+	height: 20px;
+	line-height: 20px;
+	font-weight: 700;
+	vertical-align: super;
+}
+	.charsheet .sheet-wrapper .sheet-doublefooter {
+		height: 46px;
+		margin: 0;
+	}
+	
+	.charsheet .sheet-wrapper .sheet-doublefooter label {
+		padding: 0;
+		font-size: 10px;
+		height: 20px;
+		line-height: 20px;
+		font-weight: 700;
+		vertical-align: super;
+	}
+
+.charsheet .sheet-wrapper .sheet-item {
+	display: inline-block;
+	width: 100%;
+	height: 28px;
+	vertical-align: middle;
+	margin: 0 -2px;
+	text-align: left;
+	padding: 3px 2px;
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-center {
+	text-align: center;
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-multiline label {
+	line-height: 12px;
+	padding-top: 1px;
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-puny {
+	width: calc(10% - 3%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-little {
+	width: calc(12% - 0.5%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-tiny {
+	width: calc(15% - 2.2%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-small {
+	width: calc(20% - 0.5%);
+}
+
+.charsheet .sheet-wrapper textarea.sheet-small {
+	height: 32px;
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-med {
+	width: calc(30% - 0.5%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-large {
+	width: calc(40% - 4%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-big {
+	width: calc(50% - 3%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-morebig {
+	width: calc(60% - 3%);	
+}
+.charsheet .sheet-wrapper .sheet-item.sheet-bigger {
+	width: calc(70% - 3%);
+}
+
+.charsheet .sheet-wrapper .sheet-item.sheet-huge {
+	width: calc(80% - 3%);
+}
+
+/* Notes Textfield */
+
+.charsheet .sheet-wrapper .sheet-notesfield textarea {
+  	resize: vertical;
+	padding: 2px;
+	height: 18px;
+	width: 95%;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal;
+	margin: 0;
+	color: #555;
+	background-color: white;
+	vertical-align: middle;
+}
+
+/* Drawing the Lines! */
+
+.charsheet .sheet-wrapper .sheet-topline label {
+    border-top: 1px solid #0050a0; /* original was #8C001A */
+    width: 100%;
+    margin:auto;
+	font-size:11px;
+	font-weight:bold;
+    vertical-align:super;
+    line-height:15px;
+}
+
+.charsheet .sheet-wrapper .sheet-footer.sheet-topline label {
+    margin-top:-10px;
+}
+
+.charsheet .sheet-wrapper .sheet-bottomline label {
+    border-bottom: 1px solid #0050a0; /* original was #8C001A */
+    width: 100%;
+    margin:auto;
+	font-size:11px;
+	font-weight:bold;    
+}
+
+.charsheet .sheet-wrapper .sheet-footer.sheet-bottomline label {
+    margin-bottom:-10px;
+}
+
+/* Baseinfo */
+
+.charsheet .sheet-wrapper .sheet-baseinfo {
+	display: inline-block;
+	width: 145px;
+}
+
+/* attempting to make an expanding text box */
+
+.sheet-auto-expand {
+	position: relative;
+	cursor: text;
+	word-wrap: break-word;
+}
+.sheet-auto-expand span {
+	visibility: hidden;
+	white-space: pre-wrap;
+	display: block;
+}
+.sheet-auto-expand textarea {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	resize: none;
+        min-height:18px;
+	height: 100%;
+	width: 100%;
+	display: block;
+	box-sizing: border-box;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	letter-spacing: inherit;
+	padding: inherit;
+	text-align: inherit;
+	text-transform: inherit;
+}
+
+input[type="number"]
+{
+    text-align: center;
+}
+
+
+.sheet-full,
+input[type="number"].sheet-full
+{
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+.sheet-logo {
+    max-height: 150px;
+    min-width:  100px;
+    
+}
+
+
+/* template for rolls */
+
+/* Smaller margins - remove these if you want the huge default left margin */
+.sheet-rolltemplate-custom {
+  margin-left: -37px;
+}
+.withoutavatars .sheet-rolltemplate-custom {
+  margin-left: -7px;
+}
+
+.sheet-rolltemplate-custom .sheet-container {
+  border: 1px solid;
+  /* by default, the border is the same color as the header. You can change this here, e.g. to black */
+  border-color: var(--header-bg-color);
+}
+
+/* Header formatting - title and subtitle */
+.sheet-rolltemplate-custom .sheet-header {
+  background-color: var(--header-bg-color);
+  /* change text-align to center to center the header text */
+  text-align: left;
+  color: var(--header-text-color);
+  padding: 5px;
+}
+.sheet-rolltemplate-custom .sheet-title {
+  font-size:1.1em;
+}
+.sheet-rolltemplate-custom .sheet-subtitle {
+  font-size:.9em;
+}
+
+
+
+
+/* TEMPLATE COLOUR SELECTION */
+
+/* example colors */
+.sheet-rolltemplate-custom .sheet-container {
+  /* this is the default color */
+  --header-bg-color: rgba(112,32,130,1);
+  --header-text-color: #FFF;
+}
+
+
+.sheet-rolltemplate-custom .sheet-container.sheet-color-lime {
+  --header-bg-color: rgba(139,190,27,0.75);
+  --header-text-color: #000;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-pink {
+  --header-bg-color: rgba(255,150,211,0.75);
+  --header-text-color: #000;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-indigo {
+  --header-bg-color: rgba(55,0,177,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-green {
+  --header-bg-color: rgba(0,111,0,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-purple {
+  --header-bg-color: rgba(155,51,148,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-blue {
+  --header-bg-color: rgba(0,128,183,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-orange {
+  --header-bg-color: rgba(249,140,0,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-yellow {
+  --header-bg-color: rgba(255,222,99,0.75);
+  --header-text-color: #000;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-brown {
+  --header-bg-color: rgba(101,67,33,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-red {
+  --header-bg-color: rgba(155,25,27,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-grey {
+  --header-bg-color: rgba(99,99,99,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-teal {
+  --header-bg-color: rgba(0,119,92,0.75);
+  --header-text-color: #FFF;
+}
+
+
+
+.sheet-rolltemplate-custom .sheet-container.sheet-color-black {
+  --header-bg-color: rgba(0,0,0,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-dark {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  --header-bg-color: rgba(0,0,0,0.75);
+  --header-text-color: #FFF;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-evil {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  --header-bg-color: rgba(0,0,0,0.95);
+  --header-text-color: #F10;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-hero {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  --header-bg-color: rgba(23,111,199,0.75);
+  --header-text-color: #000;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-villain {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  --header-bg-color: rgba(199,25,25,0.75);
+  --header-text-color: #000;
+}
+.sheet-rolltemplate-custom .sheet-container.sheet-color-rogue {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  --header-bg-color: rgba(252,199,55,0.75);
+  --header-text-color: #000;
+}
+
+/* Allprops part */
+.sheet-rolltemplate-custom .sheet-content {
+  display: grid;
+  background: #FFF;
+  /* Header formatting - modify the column layout below */
+  grid-template-columns: auto auto;
+  /* Line height to match default roll template */
+  line-height:1.4em;
+}
+.sheet-rolltemplate-custom .sheet-content > div {
+  padding: 5px;
+}
+
+/* Left column */
+.sheet-rolltemplate-custom .sheet-content .sheet-key {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+
+/* Empty rule, use this if you want to change the right column 
+.sheet-rolltemplate-custom .sheet-value {
+}
+*/
+
+/* Make even-numbered rows grey */
+.sheet-rolltemplate-custom .sheet-content :nth-child(4n+3),
+.sheet-rolltemplate-custom .sheet-content :nth-child(4n) {
+  background:#EEE;
+}
+
+/* Description field */
+.sheet-rolltemplate-custom .sheet-desc {
+  grid-column: span 2;
+  padding: 5px;
+  text-align: center;
+}
+/*Sheet Icon Class Definition */
+.sheet-icon img {
+     width: 50 px;
+}
+/*Sheet Social Stat Icon Class Definition */
+.sheet-social-icon img {
+     width: 124 px;
+}
+/*Sheet Resource Stat Icon Class Definition */
+.sheet-resource-icon img {
+     width: 150 px;
+}
+/*This is testing out modifying radio buttons*/
+/*[type=radio] + img { 
+  background: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
+  width: 80 px;
+  height: 80 px;
+}
+[type=radio]:checked + img { 
+  background: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
+  width: 80 px;
+  height: 80 px;
+} */
+
+
+/* CHECKBOXES and testing out image capacity for them  */
+ /*label::before {
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
+}
+:checked + label::before {
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
+} */
+.charsheet input[type=checkbox] {
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
+}
+
+.charsheet input[type=checkbox] + label {
+    height: 50px;
+    width: 50px;
+    display:block;
+    padding: 0 0 0 0px;
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
+}
+
+.charsheet input[type=checkbox]:checked + label {
+    height: 50px;
+    width: 50px;
+    display:block;
+    padding: 0 0 0 0px;
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
+}
+
+/* Playing around with checkbox-collapsible sections. */
+
+.charsheet .sheet-wrapper .sheet-hider input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+.charsheet .sheet-wrapper .sheet-hider input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
