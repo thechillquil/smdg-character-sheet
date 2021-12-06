@@ -1,10 +1,5 @@
 
-
-
-
 /* Ctrl + F for "Swap Style Helper" to swap to Hero, Villain or Rogue sheets */
-
-
 
 
 /* CSS Reset */{}
@@ -67,17 +62,9 @@ div.sheet-core-content {
     box-shadow: 0px 0px 5px blue;
 }
 
-
-
-
-
-
 .repcontainer[data-groupname="repeating_skills"] > .repitem {
     display: inline-block;
 }
-
-
-
 
 /* Swap Style Helper */
 
@@ -101,21 +88,6 @@ div.sheet-core-content {
 	margin-left: calc(0px - 60% - 55px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .charsheet input.sheet-tab1:checked + span.sheet-tab1,
 .charsheet input.sheet-tab2:checked + span.sheet-tab2,
 .charsheet input.sheet-tab3:checked + span.sheet-tab3,
@@ -132,7 +104,6 @@ div.sheet-core-content {
 
 /*----------- End Tab Setup -----------*/
 /* tab stuff ends */
-
 
 .charsheet .sheet-wrapper table {
     border-collapse: collapse;
@@ -177,32 +148,6 @@ div.sheet-core-content {
 	height: 2em;
 }
 
-/* .charsheet .sheet-wrapper button[type="roll"],
-.charsheet .sheet-wrapper .sheet-btn {
-    width: 48px;
-    height:48px;
-	vertical-align: middle;
-	padding: 0;
-	margin: 0;
-	font-weight: none;
-	text-align: center;
-	vertical-align: middle;
-	cursor: pointer;
-	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904772824495960084/button_inactive.png);
-	background-color: #000000;
-	border: none;
-	white-space: nowrap;
-	border-radius: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-} */
-
-
 .charsheet .sheet-wrapper button[type="roll"]:hover,
 .charsheet .sheet-wrapper .sheet-btn:hover,
 .charsheet .sheet-wrapper .sheet-hider input[type=checkbox]:checked ~ .sheet-btn {
@@ -212,12 +157,6 @@ div.sheet-core-content {
 	border-color: none; /* original was #8C001A */
 	background-position: 0;
 }
-
-
-
-
-
-
 
 .charsheet .sheet-wrapper .sheet-hider input[type=checkbox]:checked ~ .sheet-btn {
 	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
@@ -255,12 +194,6 @@ div.sheet-core-content {
 }
 
 
-
-
-
-
-
-
 /* IMPORTANT BELOW */
 
 /* To change to hero style sheets... */
@@ -270,8 +203,6 @@ div.sheet-core-content {
 /* To change to villain style sheets... */
 /* Top-most sheet-box is renamed to h3hero */
 /* Lower sheet-box is simply h3 */
-
-
 
 /* Heroic blue header */
 .charsheet .sheet-wrapper h3 {
@@ -283,7 +214,6 @@ div.sheet-core-content {
     font-weight:700;
 }
 
-
 /* Villainous red header */
 .charsheet .sheet-wrapper h3-villain {
     background-color:#4F1000; /* original was #3F0001, likely for extremely dark red used in banners */
@@ -294,14 +224,12 @@ div.sheet-core-content {
     font-weight:700;
 }
 
-
-
 .charsheet .sheet-wrapper h4 { /* for white text */
     font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
     background-color:#00204f; /* original was #3F0001, likely for extremely dark red used in banners */
     color:#fff;
     padding:3px;
-	margin-bottom 5px;
+	margin-bottom: 5px;
     font-size:14px;
     font-weight:500;
 }
@@ -311,11 +239,10 @@ div.sheet-core-content {
     background-color:#00204f; /* original was #3F0001, likely for extremely dark red used in banners */
     color:#000;
     padding:3px;
-	margin-bottom 5px;
+	margin-bottom: 5px;
     font-size:14px;
     font-weight:500;
 }
-
 
 .charsheet .sheet-wrapper h5 { /* for black text */
     color:#d00;
@@ -331,9 +258,6 @@ div.sheet-core-content {
     color:#a0c;
     font-weight:5000;
 }
-
-
-
 
 .charsheet .sheet-wrapper .sheet-colouredheader-lime { /* COLOUR Lime */
     background-color:#8BBE1B; /* original was #3F0001, likely for extremely dark red used in banners */
@@ -369,12 +293,9 @@ div.sheet-core-content {
     background-color:#939393; /* original was #3F0001, likely for extremely dark red used in banners */
 }
 
-
 .charsheet .sheet-wrapper .sheet-colouredheader-attack { /* COLOUR Pink */
     background-color: rgba(155, 0, 10, 0.75); /* original was #3F0001, likely for extremely dark red used in banners */
 }
-
-
 
 .charsheet .sheet-wrapper input, .charsheet .sheet-wrapper textarea, .charsheet .sheet-wrapper select, .charsheet .sheet-wrapper input[type="number"] {
 	display: inline-block;
@@ -483,10 +404,6 @@ div.sheet-core-content {
 	margin-right: 0 !important;
 }
 
-
-
-
-
 /* IMPORTANT BELOW */
 
 /* To change to hero style sheets... */
@@ -496,12 +413,6 @@ div.sheet-core-content {
 /* To change to villain style sheets... */
 /* Top-most sheet-box is renamed to sheet-box2 */
 /* Lower sheet-box is simply sheet-box */
-
-
-
-
-
-
 
 /* Special Styles */ /* Heroic blue sheet boxes */
 .charsheet .sheet-wrapper .sheet-box {
@@ -532,7 +443,7 @@ div.sheet-core-content {
 .charsheet .sheet-wrapper .sheet-box2 {
     padding: 5px;
     margin-top:-5px;
-    border-top: 1px solid ##4F1000; /* original was #8C001A */ /* topmost part just under the header */
+    border-top: 1px solid #4F1000; /* original was #8C001A */ /* topmost part just under the header */
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#4F1000)); /* original was #8c001a */
     background-image: -webkit-linear-gradient(transparent, #4F1000); /* original was #8c001a */
     background-image:
@@ -552,23 +463,6 @@ div.sheet-core-content {
     background-position:0 0, 100% 0;
     background-repeat:no-repeat;
 }	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .charsheet .sheet-wrapper .sheet-transparent {
     background:transparent;
@@ -662,19 +556,20 @@ div.sheet-core-content {
 	font-weight: 700;
 	vertical-align: super;
 }
-	.charsheet .sheet-wrapper .sheet-doublefooter {
-		height: 46px;
-		margin: 0;
-	}
-	
-	.charsheet .sheet-wrapper .sheet-doublefooter label {
-		padding: 0;
-		font-size: 10px;
-		height: 20px;
-		line-height: 20px;
-		font-weight: 700;
-		vertical-align: super;
-	}
+
+.charsheet .sheet-wrapper .sheet-doublefooter {
+    height: 46px;
+    margin: 0;
+}
+
+.charsheet .sheet-wrapper .sheet-doublefooter label {
+    padding: 0;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    vertical-align: super;
+}
 
 .charsheet .sheet-wrapper .sheet-item {
 	display: inline-block;
@@ -828,7 +723,6 @@ input[type="number"]
     text-align: center;
 }
 
-
 .sheet-full,
 input[type="number"].sheet-full
 {
@@ -843,7 +737,6 @@ input[type="number"].sheet-full
     min-width:  100px;
     
 }
-
 
 /* template for rolls */
 
@@ -875,9 +768,6 @@ input[type="number"].sheet-full
 .sheet-rolltemplate-custom .sheet-subtitle {
   font-size:.9em;
 }
-
-
-
 
 /* TEMPLATE COLOUR SELECTION */
 
@@ -938,8 +828,6 @@ input[type="number"].sheet-full
   --header-text-color: #FFF;
 }
 
-
-
 .sheet-rolltemplate-custom .sheet-container.sheet-color-black {
   --header-bg-color: rgba(0,0,0,0.75);
   --header-text-color: #FFF;
@@ -990,11 +878,6 @@ input[type="number"].sheet-full
   text-align: right;
 }
 
-/* Empty rule, use this if you want to change the right column 
-.sheet-rolltemplate-custom .sheet-value {
-}
-*/
-
 /* Make even-numbered rows grey */
 .sheet-rolltemplate-custom .sheet-content :nth-child(4n+3),
 .sheet-rolltemplate-custom .sheet-content :nth-child(4n) {
@@ -1019,26 +902,7 @@ input[type="number"].sheet-full
 .sheet-resource-icon img {
      width: 150 px;
 }
-/*This is testing out modifying radio buttons*/
-/*[type=radio] + img { 
-  background: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
-  width: 80 px;
-  height: 80 px;
-}
-[type=radio]:checked + img { 
-  background: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
-  width: 80 px;
-  height: 80 px;
-} */
 
-
-/* CHECKBOXES and testing out image capacity for them  */
- /*label::before {
-    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
-}
-:checked + label::before {
-    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
-} */
 .charsheet input[type=checkbox] {
     background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
 }
