@@ -1168,7 +1168,22 @@
                                             &nbsp;
                                         </td>
                                         <td>
-                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo" value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity} @{inventory-equipmenttype}}} {{Range= @{inventory-equipmentrange}}} {{Accuracy=[[@{inventory-equipmentattacktype}]] [[@{inventory-equipmentattacktype}]]}} {{Damage=[[@{inventory-equipmentdice}]] [[@{inventory-equipmentdice}]]}} {{desc=@{inventory-list1}}}">
+                                            <label style="background-color:#000000; text-align:center; color:#ff0000;">NPC Mod</label>
+                                        </td>
+                                        <td>
+                                            <input type="number" name="attr_npcaccuracymod" value="0" style="width:20%; text-align:center;"/>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo" value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity} @{inventory-equipmenttype}}} {{Range= @{inventory-equipmentrange}}} {{Accuracy=[[@{inventory-equipmentattacktype}+@{npcaccuracymod}]] [[@{inventory-equipmentattacktype}+@{npcaccuracymod}]]}} {{Damage=[[@{inventory-equipmentdice}]] [[@{inventory-equipmentdice}]]}} {{desc=@{inventory-list1}}}">
                                         </td>
                                         <td>
                                             <input type="checkbox"/>
@@ -1833,6 +1848,9 @@
                             <td colspan =1>
                                 <label style="background-color:#d19999; text-align:center;">Known By</label>
                             </td>
+                            <td colspan =1>
+                                <label style="background-color:#000000; text-align:center; color:#ff0000;">NPC Mod</label>
+                            </td>
                         </tr>
 
                         <tr>
@@ -1866,6 +1884,9 @@
                             </td>
                             <td colspan =1>
                                 <input type="text" name="attr_common-attack-known-by" value="Persona"/>
+                            </td>
+                            <td colspan =1>
+                                <input type="number" name="attr_npcaccuracymod" value="0"/>
                             </td>
                         </tr>
                         <div>
@@ -1912,7 +1933,7 @@
                                         </td>
                                         <td colspan =1>
                                             <button type="roll" name="roll-common-attack-roller" class="sheet-colouredheader-red"
-                                            value="&{template:custom} {{color=red}} {{title=@{common-attacks-name}}} {{subtitle=Skill}} {{Action Cost=@{common-attack-action}}} {{HP/SP Cost=@{common-attack-endurance}}} {{Range=@{common-attack-precision-range}}} {{Accuracy=[[3d6]] [[3d6]]}} {{@{common-attack-type}=[[@{common-attack-damage}]] [[@{common-attack-damage}]]}} {{desc=@{common-attack-description}}}">
+                                            value="&{template:custom} {{color=red}} {{title=@{common-attacks-name}}} {{subtitle=Skill}} {{Action Cost=@{common-attack-action}}} {{HP/SP Cost=@{common-attack-endurance}}} {{Range=@{common-attack-precision-range}}} {{Accuracy=[[3d6+@{npcaccuracymod}]] [[3d6+@{npcaccuracymod}]]}} {{@{common-attack-type}=[[@{common-attack-damage}]] [[@{common-attack-damage}]]}} {{desc=@{common-attack-description}}}">
                                         </td>
                                     </tr>
 
