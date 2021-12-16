@@ -101,8 +101,8 @@
                 setAttrs({
                     "endurance" : tempEndurance,
                     "magic" : tempMagic,
-                    "maxhp" : tempHPMaximum,
-                    "maxsp" : tempSPMaximum
+                    "maxhp_max" : tempHPMaximum,
+                    "maxsp_max" : tempSPMaximum
                 });
             });
         });
@@ -763,7 +763,7 @@
                                     </div>
                                 </td>
                                 <td colspan=2>
-                                    <input type="number" name="attr_hitpoints-curr" value="0" style="text-align:center; color:#000000; font-size:20px; padding-left:20%; padding-right:20%;"/>
+                                    <input type="number" name="attr_maxhp" value="0" style="text-align:center; color:#000000; font-size:20px; padding-left:20%; padding-right:20%;"/>
                                 </td>
                             </tr>
                             
@@ -772,7 +772,7 @@
                                     &nbsp;
                                 </td>
                                 <td colspan=3>
-                                    <span class="attr" name="attr_maxhp" title="@{hp}" style="font-weight:400; color:#000000; font-size:150%; float:right; text-align:right; background-color:#00ff00; padding-left:60%; padding-right:60%;">0</span>
+                                    <span class="attr" name="attr_maxhp_max" title="@{hp}" style="font-weight:400; color:#000000; font-size:150%; float:right; text-align:right; background-color:#00ff00; padding-left:60%; padding-right:60%;">0</span>
                                 </td>
                             </tr>
                             
@@ -850,7 +850,7 @@
                                     </div>
                                 </td>
                                 <td colspan=2>
-                                    <input type="number" name="attr_spellpoints-curr" value="0" style="text-align:center; color:#000000; font-size:20px; padding-left:20%; padding-right:20%;"/>
+                                    <input type="number" name="attr_maxsp" value="0" style="text-align:center; color:#000000; font-size:20px; padding-left:20%; padding-right:20%;"/>
                                 </td>
                             </tr>
                             
@@ -859,7 +859,7 @@
                                     &nbsp;
                                 </td>
                                 <td colspan=2>
-                                    <span class="attr" name="attr_maxsp" title="@{sp}" style="font-weight:400; color:#000000; font-size:150%; float:right; text-align:right; background-color:#FC46AA; padding-left:60%; padding-right:60%;">0</span>
+                                    <span class="attr" name="attr_maxsp_max" title="@{sp}" style="font-weight:400; color:#000000; font-size:150%; float:right; text-align:right; background-color:#FC46AA; padding-left:60%; padding-right:60%;">0</span>
                                 </td>
                             </tr>
                             
