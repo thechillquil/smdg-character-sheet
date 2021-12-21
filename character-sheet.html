@@ -1095,7 +1095,7 @@
                             &nbsp;
                         </td>
                     </tr>
-                    
+                    <!-- Equipment Repeating List -->
                     <tr>
                         <td style = "padding-left:5%; padding-right:5%;">
                             <div class="sheet-resources-icon">
@@ -1184,10 +1184,10 @@
                                             &nbsp;
                                         </td>
                                         <td>
-                                            <label style="background-color:#bfbfbf; text-align:center;">Range:</label>
+                                            <label style="background-color:#bfbfbf; text-align:center;">Range (feet):</label>
                                         </td>
                                         <td>
-                                            <input type="text" name="attr_inventory-equipmentrange" value="5 feet" style="width:30%; text-align:center;"/>
+                                            <input type="number" name="attr_inventory-equipmentrange" value="5" style="width:30%; text-align:center;"/>
                                         </td>
                                         <td>
                                             &nbsp;
@@ -1199,10 +1199,50 @@
                                             &nbsp;
                                         </td>
                                         <td>
-                                            <label style="background-color:#bfbfbf; text-align:center;">Ammo Max:</label>
+                                            <label style="background-color:#ebaf0a; text-align:center;">Critical:</label>
                                         </td>
                                         <td>
-                                            <input type="number" name="attr_inventory-equipmentammomax" value="0" style="width:20%; text-align:center;"/>
+                                            <input type="text" name="attr_inventory-equipmentcritical" value="1d0" style="width:30%; text-align:center;"/>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <label style="background-color:#448f44; text-align:center;">Firearms Expert:</label>
+                                        </td>
+                                        <td>
+                                            <select name="attr_inventory-equipmentfirearmsexpert" class="ptype">
+                                                <option value="">None</option>
+                                                <option value="Range increased by 30 feet.">Long Barrel</option>
+                                                <option value="You may add @{proficiency} to the damage roll.">Power Receiver</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <label style="background-color:#448f44; text-align:center;">Camouflage Customization:</label>
+                                        </td>
+                                        <td>
+                                            <select name="attr_inventory-equipmentcamocustomization" class="ptype">
+                                                <option value="">None</option>
+                                                <option value="The weapon consumes 1 additional Ammo per attack made with it. On a hit, if all d6s in the attack roll are a 3 or higher, the creature is inflicted with Burn.">Red Camo</option>
+                                                <option value="The weapon consumes 1 additional Ammo per attack made with it. On a hit, if all d6s in the attack roll are a 3 or higher, the creature is inflicted with Shock.">Yellow Camo</option>
+                                                <option value="The weapon consumes 1 additional Ammo per attack made with it. On a hit, if all d6s in the attack roll are a 3 or higher, the creature is inflicted with Freeze.">Blue Camo</option>
+                                                <option value="The weapons maximum Ammo is increased by 2 while attuned to.">Green Camo</option>
+                                            </select>
                                         </td>
                                         <td>
                                             &nbsp;
@@ -1223,13 +1263,13 @@
                                             &nbsp;
                                         </td>
                                     </tr>
-
+<!-- Equipment Repeating Dice Roller -->
                                     <tr>
                                         <td>
                                             &nbsp;
                                         </td>
                                         <td>
-                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo" value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity} @{inventory-equipmenttype}}} {{Range= @{inventory-equipmentrange}}} {{Accuracy=[[@{inventory-equipmentattacktype}+@{npcaccuracymod}]] [[@{inventory-equipmentattacktype}+@{npcaccuracymod}]]}} {{Damage=[[@{inventory-equipmentdice}]] [[@{inventory-equipmentdice}]]}} {{desc=@{inventory-list1}}}">
+                                            <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-indigo" value="&{template:custom} {{color=indigo}} {{title=@{inventory-equipmentname}}} {{subtitle=@{inventory-equipmentrarity}, @{inventory-equipmenttype}}} {{Range in feet= @{inventory-equipmentrange}}} {{Accuracy=[[@{inventory-equipmentattacktype}+@{npcaccuracymod}]] or [[@{inventory-equipmentattacktype}+@{npcaccuracymod}]]}} {{Damage=[[@{inventory-equipmentdice}]] or [[@{inventory-equipmentdice}]]}} {{Strength=[[@{strength}+@strengthbuff]]}} {{Proficiency=[[@{proficiency}]]}} {{Luck=[[@{luck}+@{luckbuff}]]}} {{Firearms Expert=@{inventory-equipmentfirearmsexpert}}} {{Camo. Custom.=@{inventory-equipmentcamocustomization}}} {{Critical Buffs=[[@{inventory-equipmentcritical}]]}} {{desc=@{inventory-list1}}}">
                                         </td>
                                         <td>
                                             <input type="checkbox"/>
@@ -1264,7 +1304,7 @@
                             &nbsp;
                         </td>
                     </tr>
-                    
+                    <!-- Bonds Repeating List -->
                     <tr>
                         <td style = "padding-left:5%; padding-right:5%;">
                             <div class="sheet-resources-icon">
@@ -1316,6 +1356,7 @@
                                                 <option value="10th">10th</option>
                                             </select>
                                         </td>
+                                        <!-- Bonds Dice Roller -->
                                         <td width=25% style="padding-right:5%;">
                                             <button type="roll" name="roll-equipment-combined" class="sheet-colouredheader-cyan" value="&{template:custom} {{color=cyan}} {{title=@{bonds-name}}} {{subtitle=@{bonds-arcana}, @{bonds-level} Level Bond}} {{1st. No benefits.}} {{2nd. [~Counting on You~] Whenever one of the bonded allies Baton Passes an action to the other, the recipient gains the benefits of Tarukaja at no cost.}} {{3rd. [~New Insights (NPC)~] Whenever you engage with the Hang Out activity with the bonded ally, roll for a Skill on the Hidden Potential table in the SMDG Demon Compendium. You may learn that Skill. If you are already at your maximum number of Skills known, it must replace a Skill you already have known. The Skill may be learned by yourself/core Persona, or a Sub-Persona/Demon Ally.}} {{4th. [~Arcana Surge~] Both characters benefit from Arcana Burst of each other’s Arcana, as if it were their own.}} {{5th. [~Discount (NPC)~] If the bonded ally is a vendor, items may be purchased at half cost.}} {{6th. [~I've Got your Back~] Whenever one of the bonded allies Baton Passes an action to the other, the recipient gains the benefits of Rakukaja at no cost.}} {{7th. [~What am I to You? (NPC)~] The bonded ally gains an Arcana, if they weren’t already assigned an Arcana. This allows you and the bonded ally to gain the effects of the Arcana Surge and Arcana Resonance Bond Level benefits.}} {{8th. [~Stay with Me!~] Whenever a bonded ally unaffected by a Condition ends their turn within 5 feet of the other bonded ally, the other recovers from all Conditions.}} {{9th. [~Free Market (NPC)~] If the bonded ally is a vendor, you may sell items to them at their normal value.}} {{10th. [~Arcana Resonance~] Both characters gain the Arcana Feature of the other. Multiple instances of the same Arcana Feature cannot stack.}}">
                                         </td>
@@ -1339,6 +1380,7 @@
         </div>
 
         <!-- CORE PERSONA ! Tab -->
+        <!-- Status Screen -->
         <div class="sheet-section-6"  style="background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/910926441846280232/black.png); background-size:contain; background-size:cover;">
             <h3>Status</h3>
             <table width=100%>
@@ -1513,7 +1555,10 @@
                         <label style="background-color:#3c89d0; text-align:center;">Tetraja</label>
                     </td>
                     <td width=20%>
-                        <label style="background-color:#b2beb5; text-align:center;">Valhalla</label>
+                        <label style="background-color:#9cdaac; text-align:center;">Valhalla</label>
+                    </td>
+                    <td width=20%>
+                        <label style="background-color:#d1d1d1; text-align:center;">Foul Breath</label>
                     </td>
                 </tr>
 
@@ -1561,20 +1606,23 @@
                         </select>
                     </td>
                     <td width=20%>
-                        &nbsp;    
+                        <select name="attr_foulbreath">
+                            <option value="">NONE</option>
+                            <option value="[~Foul Breath~] Whenever a creature attempts to inflict you with a Condition, flip a coin. If heads, the Condition is inflicted.">FOUL BREATH</option>
+                        </select>
                     </td>
                 </tr>
-
+<!-- Status Dice Roller -->
                 <tr>
                     <td colspan=5>
                         &nbsp;
                     </td>
                     <td>
-                        <button type="roll" name="roll-common-attack-roller" class="sheet-colouredheader-green" value="&{template:custom} {{color=green}} {{title=Status Summary}} {{subtitle=@{character-name}}} {{HP : @{hitpoints-curr} / @{maxhp}}} {{SP : @{spellpoints-curr} / @{maxsp}}} {{@{tarukaja}}} {{@{rakukaja}}} {{@{sukukaja}}} {{@{rebellion}}} {{@{charge}}} {{@{element-wall}}} {{@{element-break}}} {{@{life-wall}}} {{@{tetraja}}} {{@{valhalla}}} {{@{status-condition-1}}} {{@{status-condition-2}}} {{@{status-condition-3}}}">
+                        <button type="roll" name="roll-common-attack-roller" class="sheet-colouredheader-green" value="&{template:custom} {{color=green}} {{title=Status Summary}} {{subtitle=@{character-name}}} {{HP : @{hitpoints-curr} / @{maxhp}}} {{SP : @{spellpoints-curr} / @{maxsp}}} {{@{tarukaja}}} {{@{rakukaja}}} {{@{sukukaja}}} {{@{rebellion}}} {{@{charge}}} {{@{element-wall}}} {{@{element-break}}} {{@{life-wall}}} {{@{tetraja}}} {{@{valhalla}}} {{@{foulbreath}}} {{@{status-condition-1}}} {{@{status-condition-2}}} {{@{status-condition-3}}}">
                     </td>
                 </tr>
             </table>
-
+<!-- Persona Section -->
             <h3>Core Persona</h3>
             <div class="sheet-box">
                 <table width = 100%>
@@ -1652,7 +1700,7 @@
                                 <img class="sheet-logo" src="https://cdn.discordapp.com/attachments/900199385370071080/903115270120439838/affinities_title.png"/>
                             </td>
                         </tr>
-
+<!-- Core Persona Affinities -->
                         <tr>
                             <td style="width:50px">
                                 <label style="background-color:#FFA500; text-align:center;">PHYSICAL</label>
@@ -1874,7 +1922,7 @@
                             </td>
                         </tr>
                     </td>
-                </table>     
+                </table>     <!-- Skills Repeating List -->
                 <h3>Skills</h3>                                                                            
                 <fieldset class="repeating_attack">
                     <table colspan=6>
@@ -1901,7 +1949,7 @@
 
                         <tr>
                             <td colspan =2>
-                                <input type="text" name="attr_common-attacks-name" value="Unarmed Strike"/>
+                                <input type="text" name="attr_common-attack-name" value="Skill Name"/>
                             </td>
                             <td colspan =1>
                                 <input type="text" name="attr_common-attack-endurance" value="0 HP"/>
@@ -1948,6 +1996,9 @@
                                         <td colspan =1>
                                             <label style="background-color:#c58080; text-align:center;">Tier</label>
                                         </td>
+                                        <td>
+                                            <label style="background-color:#ebaf0a; text-align:center;">Critical</label>
+                                        </td>
                                     </tr>
 
                                     <tr>
@@ -1962,6 +2013,9 @@
                                             <input type="text" name="attr_common-attack-short-description" 
                                             value="1st"/>
                                         </td>
+                                        <td>
+                                            <input type="text" name="attr_common-attack-critical" value="1d0" style="text-align:center;"/>
+                                        </td>
                                     </tr>
 
                                     <tr>
@@ -1975,11 +2029,12 @@
 
                                     <tr>
                                         <td colspan = 4>
-                                            <textarea name="attr_common-attack-description">When all else fails, you can still rely on your own two fists. Punch them in the face!</textarea>
+                                            <textarea name="attr_common-attack-description">Skill descriptions go here!</textarea>
                                         </td>
+                                        <!-- Skills Repeating List Dice Roller -->
                                         <td colspan =1>
                                             <button type="roll" name="roll-common-attack-roller" class="sheet-colouredheader-red"
-                                            value="&{template:custom} {{color=red}} {{title=@{common-attacks-name}}} {{subtitle=Skill}} {{Action Cost=@{common-attack-action}}} {{HP/SP Cost=@{common-attack-endurance}}} {{Range=@{common-attack-precision-range}}} {{Accuracy=[[3d6+@{npcaccuracymod}]] [[3d6+@{npcaccuracymod}]]}} {{@{common-attack-type}=[[@{common-attack-damage}]] [[@{common-attack-damage}]]}} {{desc=@{common-attack-description}}}">
+                                            value="&{template:custom} {{color=red}} {{title=@{common-attack-name}}} {{subtitle=Skill}} {{Action Cost=@{common-attack-action}}} {{HP/SP Cost=@{common-attack-endurance}}} {{Range=@{common-attack-precision-range}}} {{Accuracy=[[3d6+@{npcaccuracymod}]] or [[3d6+@{npcaccuracymod}]]}} {{@{common-attack-type}=[[@{common-attack-damage}]] or [[@{common-attack-damage}]]}} {{Strength=[[@{strength}+@{strengthbuff}]]}} {{Magic=[[@{magic}+@{magicbuff}]]}} {{Luck=[[@{luck}+@{luckbuff}]]}} {{Critical Buffs=[[@{common-attack-critical}]]}} {{desc=@{common-attack-description}}}">
                                         </td>
                                     </tr>
 
