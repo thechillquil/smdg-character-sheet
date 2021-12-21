@@ -23,6 +23,18 @@
         });
     </script>
     <script type="text/worker">
+        on("change:agility change:agilitybuff sheet:opened", function() {
+            getAttrs(["agility","agilitybuff"], function(values) {
+                let tempagility = parseInt(values.agility) || 0;
+                let tempagilitybuff = parseInt(values.agilitybuff) || 0;
+                let tempagilitystatus = tempagility + tempagilitybuff
+                setAttrs({
+                    "agilitystatus" : tempagilitystatus
+                });
+            });
+        });
+    </script>
+    <script type="text/worker">
         on("change:charm sheet:opened", function() {
             getAttrs(["charm"], function(values) {
                 let cha = parseInt(values.charm) || 0;
@@ -1479,6 +1491,26 @@
                         <span class="attr" name="attr_maxsp" title="@{sp}" style="font-weight:400; color:#000000; text-align:center; background-color:#FC46AA; font-size:20px; padding-left:15%; padding-right:15%;">0</span>
                     </td>
                     <td colspan=3>
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="sheet-social-icon">
+                            <img src="https://cdn.discordapp.com/attachments/900199385370071080/903388905028603964/Agility_title.png" style="width:180px"/>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="attr" name="attr_agilitystatus" title="@{agilitydisplay}" style="background-color:#f2f2f2; font-weight:400; color:#000000; text-align:center; background-color:#f2f2f2; padding-left:15%; padding-right:15%; font-size:20px;">0</span>
+                    </td>
+                    <td colspan=3>
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
                         &nbsp;
                     </td>
                 </tr>
