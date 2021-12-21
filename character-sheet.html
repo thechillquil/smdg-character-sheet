@@ -23,6 +23,18 @@
         });
     </script>
     <script type="text/worker">
+        on("change:agility change:agilitybuff sheet:opened", function() {
+            getAttrs(["agility","agilitybuff"], function(values) {
+                let tempagility = parseInt(values.agility) || 0;
+                let tempagilitybuff = parseInt(values.agilitybuff) || 0;
+                let tempagilitystatus = tempagility + tempagilitybuff
+                setAttrs({
+                    "agilitystatus" : tempagilitystatus
+                });
+            });
+        });
+    </script>
+    <script type="text/worker">
         on("change:charm sheet:opened", function() {
             getAttrs(["charm"], function(values) {
                 let cha = parseInt(values.charm) || 0;
@@ -972,52 +984,6 @@
                                 </td>
                                 <td colspan=1>
                                     <input type="number" name="attr_ammobonus" value="0" style="text-align:center;"/>
-
-                                <td colspan=2>
-                                    <input type="number" name="attr_ammo" value="0" style="text-align:center; color:#000000; font-size:20px; padding-left:20%; padding-right:20%;"/>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td colspan=2>
-                                    &nbsp;
-                                </td>
-                                <td colspan=2>
-                                    <span class="attr" name="attr_ammo_max" title="@{ammo}" style="font-weight:400; color:#000000; font-size:150%; float:right; text-align:right; background-color:#ff0000; padding-left:60%; padding-right:60%;">0</span>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td colspan=4 style="background-color:#ce2b2b; padding-left:5%; padding-right:5%;">
-                                    <label style="text-align:center; color:#000000;">Firearm Type</label>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <td colspan=4>
-                                    <select name="attr_firearmtype" style="text-align:center;">
-                                        <option value="0">None</option>
-                                        <option value="6">Pistol</option>
-                                        <option value="10">Submachine Gun</option>
-                                        <option value="8">Assault Rifle</option>
-                                        <option value="8">Winchester</option>
-                                        <option value="3">Shotgun</option>
-                                        <option value="1">Grenade Launcher</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td width=50% style="background-color:#973030; padding-left:5%; padding-right:5%;">
-                                    <label style="text-align:center;">Ammo Bonus:</label>
-                                </td>
-                                <td colspan=1>
-                                    <input type="number" name="attr_ammobonus" value="0" style="text-align:center;"/>
-                                <td>
-                                    <input type="number" name="attr_ammo" value="0" style="text-align:center; color:#000000; font-weight:bold; font-size:20px;"/>
-                                </td>
-                                <td>
-                                    <input type="number" name="attr_ammo_max" value="0" style="background-color:#ff0000; text-align:center; color:#000000; font-weight:bold; font-size:20px;"/>
                                 </td>
                             </tr>
                             
@@ -1525,6 +1491,26 @@
                         <span class="attr" name="attr_maxsp" title="@{sp}" style="font-weight:400; color:#000000; text-align:center; background-color:#FC46AA; font-size:20px; padding-left:15%; padding-right:15%;">0</span>
                     </td>
                     <td colspan=3>
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="sheet-social-icon">
+                            <img src="https://cdn.discordapp.com/attachments/900199385370071080/903388905028603964/Agility_title.png" style="width:180px"/>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="attr" name="attr_agilitystatus" title="@{agilitydisplay}" style="background-color:#f2f2f2; font-weight:400; color:#000000; text-align:center; background-color:#f2f2f2; padding-left:15%; padding-right:15%; font-size:20px;">0</span>
+                    </td>
+                    <td colspan=3>
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
                         &nbsp;
                     </td>
                 </tr>
