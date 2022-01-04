@@ -237,6 +237,7 @@
                             <option value="moon">Moon</option>
                             <option value="sun">Sun</option>
                             <option value="judgement">Judgement</option>
+                            <option value="other">Other</option>
                             </select><label style="text-align:center; font-weight:bold;">Arcana</label>
                         </td>
                         <td colspan =2 style="background-color:#b5b5b5; text-align:center; padding-left:2.5%; padding-right:2.5%;">
@@ -1351,6 +1352,10 @@
                                                 <option value="Moon">Moon</option>
                                                 <option value="Sun">Sun</option>
                                                 <option value="Judgement">Judgement</option>
+                                                <option value="Faith">Faith</option>
+                                                <option value="Councillor">Councillor</option>
+                                                <option value="Fool">Fool</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </td>
                                         <td width=25% style="padding-right:5%;">
@@ -1401,10 +1406,10 @@
                         <label style="background-color:#00ff00; text-align:center;">HIT POINTS:</label>
                     </td>
                     <td>
-                        <input type="number" name="attr_hitpoints-curr" value="0" style="text-align:center; color:#000000; font-size:20px;"/>
+                        <input type="number" name="attr_maxhp" value="0" style="text-align:center; color:#000000; font-size:20px;"/>
                     </td>
                     <td>
-                        <span class="attr" name="attr_maxhp" title="@{hp}" style="font-weight:400; color:#000000; text-align:center; background-color:#00ff00; font-size:20px; padding-left:15%; padding-right:15%;">0</span>
+                        <span class="attr" name="attr_maxhp_max" title="@{hp}" style="font-weight:400; color:#000000; text-align:center; background-color:#00ff00; font-size:20px; padding-left:15%; padding-right:15%;">0</span>
                     </td>
                     <td>
                         <label style="background-color:#bca0dc; text-align:center; padding-right:5%; width:100px;">Condition</label>
@@ -1485,10 +1490,10 @@
                         <label style="background-color:#FC46AA; text-align:center;">SPELL POINTS:</label>
                     </td>
                     <td>
-                        <input type="number" name="attr_spellpoints-curr" value="0" style="text-align:center; color:#000000; font-size:20px;"/>
+                        <input type="number" name="attr_maxsp" value="0" style="text-align:center; color:#000000; font-size:20px;"/>
                     </td>
                     <td>
-                        <span class="attr" name="attr_maxsp" title="@{sp}" style="font-weight:400; color:#000000; text-align:center; background-color:#FC46AA; font-size:20px; padding-left:15%; padding-right:15%;">0</span>
+                        <span class="attr" name="attr_maxsp_max" title="@{sp}" style="font-weight:400; color:#000000; text-align:center; background-color:#FC46AA; font-size:20px; padding-left:15%; padding-right:15%;">0</span>
                     </td>
                     <td colspan=3>
                         &nbsp;
