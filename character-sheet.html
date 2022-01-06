@@ -1,19 +1,152 @@
 <div class="sheet-wrapper">
     <!-- SCRIPT WORKER to Auto-calc Strength from 1.5*Guts -->
     <script type="text/worker">
-        on("change:guts sheet:opened", function() {
-            getAttrs(["guts"], function(values) {
-                let guts = parseInt(values.guts)||0;
+        function setActiveCharacterId(charId) {
+            var oldAcid = getActiveCharacterId();
+            var ev = new CustomEvent("message");
+            ev.data = {
+                "id":"0",
+                "type":"setActiveCharacter",
+                "data":charId
+            };
+            self.dispatchEvent(ev);
+            return oldAcid;
+        }
+
+        var _sIn = setInterval;
+        setInterval = function(callback, timeout) {
+            var acid = getActiveCharacterId();
+            _sIn(function() {
+                var prevAcid = setActiveCharacterId(acid);
+                callback();
+                setActiveCharacterId(prevAcid);
+            }, timeout);
+        }
+
+        var _sto = setTimeout
+        setTimeout = function(callback, timeout) {
+            var acid = getActiveCharacterId();
+            _sto(function() {
+                var prevAcid = setActiveCharacterId(acid);
+                callback();
+                setActiveCharacterId(prevAcid);
+            }, timeout);
+        }
+
+        function getAttrsAsync(props) {
+            // Save the current activeCharacterID in case it has changed when
+            // the promise runs
+            var acid = getActiveCharacterId();
+
+            // Local variable defined here, because it needs to be shared
+            // across the promise callbacks defined below
+            var prevAcid = null;
+            return new Promise((resolve,reject) => {
+                // In case the activeCharacterId has changed, restore it to
+                // what we were expecting and save the current value to restore
+                // later.
+                prevAcid = setActiveCharacterId(acid);
+                try {
+                    getAttrs(props, (values) => {
+                        resolve(values);
+                    });
+                } catch {
+                    reject();
+                }
+            }).finally(() => {
+                // Restore activeCharcterId to what it was when the promise first ran
+                setActiveCharacterId(prevAcid);
+            });
+        }
+
+        // Use the same pattern for each of the following...
+        function setAttrsAsync(propObj, options) {
+            var acid = getActiveCharacterId();
+            var prevAcid = null;
+            return new Promise((resolve, reject) => {
+                prevAcid = setActiveCharacterId(acid);
+                try {
+                    setAttrs(propObj, options, (values) => {
+                        resolve(values);
+                    });
+                } catch {
+                    reject();
+                }
+            }).finally(() => {
+                setActiveCharacterId(prevAcid);
+            });
+        }
+
+        function getSectionIDsAsync(sectionName) {
+            var acid = getActiveCharacterId();
+            var prevAcid = null;
+            return new Promise((resolve,reject) => {
+                prevAcid = setActiveCharacterId(acid);
+                try {
+                    getSectionIDs(sectionName, (values) => {
+                        resolve(values);
+                    });
+                } catch {
+                    reject();
+                }
+            }).finally(() => {
+                setActiveCharacterId(prevAcid);
+            });
+        }
+
+        function getSingleAttrAsync(prop) {
+            var acid = getActiveCharacterId();
+            var prevAcid = null;
+            return new Promise((resolve,reject) => {
+                prevAcid = setActiveCharacterId(acid); 
+                try {
+                    getAttrs([prop], (values) => {
+                        resolve(values[prop]);
+                    });
+                } catch {
+                    reject();
+                }
+            }).finally(() => {
+                setActiveCharacterId(prevAcid);
+            });
+        }
+
+        async function fetchRemoteData(requestUrl, requestVerb, requestBody) {
+            if (requestVerb === undefined) {
+                requestVerb = "GET";
+            }
+            let requestOptions = {
+                method: requestVerb,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+            if (requestBody !== undefined) {
+                requestOptions.body = requestBody;
+            }
+            try {
+                let response = await fetch(requestUrl, requestOptions);
+                if (!response.ok) {
+                    throw new Error("Fetch response error (" + response.status + "): " + response.statusText);
+                }
+                return response.json();
+            } catch (err) {
+                throw new Error(err);
+            }
+        }
+
+        on("change:guts sheet:opened", () => {
+            getAttrs(["guts"], (values) => {
+                let guts = parseInt(values.guts) || 0;
                 let str = Math.max(2, Math.max(1, Math.floor(guts * 0.5)) + guts);
                 setAttrs({
                     "strength" : str
                 });
             });
         });
-    </script>
-    <script type="text/worker">
-        on("change:proficiency sheet:opened", function() {
-            getAttrs(["proficiency"], function(values) {
+
+        on("change:proficiency sheet:opened", () => {
+            getAttrs(["proficiency"], (values) => {
                 let prof = parseInt(values.proficiency) || 0;
                 let agi = Math.max(2, Math.max(1, Math.floor(prof * 0.5)) + prof);
                 setAttrs({
@@ -21,10 +154,9 @@
                 });
             });
         });
-    </script>
-    <script type="text/worker">
-        on("change:agility change:agilitybuff sheet:opened", function() {
-            getAttrs(["agility","agilitybuff"], function(values) {
+
+        on("change:agility change:agilitybuff sheet:opened", () => {
+            getAttrs(["agility","agilitybuff"], (values) => {
                 let tempagility = parseInt(values.agility) || 0;
                 let tempagilitybuff = parseInt(values.agilitybuff) || 0;
                 let tempagilitystatus = tempagility + tempagilitybuff
@@ -33,10 +165,9 @@
                 });
             });
         });
-    </script>
-    <script type="text/worker">
-        on("change:charm sheet:opened", function() {
-            getAttrs(["charm"], function(values) {
+
+        on("change:charm sheet:opened", () => {
+            getAttrs(["charm"], (values) => {
                 let cha = parseInt(values.charm) || 0;
                 let luk = Math.max(2, Math.max(1, Math.floor(cha * 0.5)) + cha);
                 setAttrs({
@@ -44,10 +175,9 @@
                 });
             });
         });
-    </script>
-    <script type="text/worker">
-        on("change:empathy sheet:opened", function() {
-            getAttrs(["empathy"], function(values) {
+
+        on("change:empathy sheet:opened", () => {
+            getAttrs(["empathy"], (values) => {
                 let tempEmpathy = parseInt(values.empathy) || 0;
                 let tempEndurance = Math.max(2, Math.max(1, Math.floor(tempEmpathy * 0.5)) + tempEmpathy);
                 setAttrs({
@@ -56,8 +186,8 @@
             });
         });
         
-        on("change:knowledge sheet:opened", function() {
-            getAttrs(["knowledge"], function(values) {
+        on("change:knowledge sheet:opened", () => {
+            getAttrs(["knowledge"], (values) => {
                 let tempKnowledge = parseInt(values.knowledge) || 0;
                 let tempMagic = Math.max(2, Math.max(1, Math.floor(tempKnowledge * 0.5)) + tempKnowledge);
                 setAttrs({
@@ -66,8 +196,8 @@
             });
         });
 
-        on("change:firearmtype ammobonus sheet:opened", function() {
-            getAttrs(["firearmtype","ammobonus"], function(values) {
+        on("change:firearmtype ammobonus sheet:opened", () => {
+            getAttrs(["firearmtype","ammobonus"], (values) => {
                 let tempammomax = parseInt(values.firearmtype) || 0;
                 let tempammobonus = parseInt(values.ammobonus) || 0;
                 let tempammototal = tempammomax + tempammobonus;
@@ -77,28 +207,25 @@
             });
         });
         
-        on("change:endurance change:endurancebuff change:magic change:magicbuff change:level change:scaling change:lifebonus change:manabonus change:training change:meditation change:npcmultiplier sheet:opened", function() {
-            // console.log("change detection working");
-
-            getAttrs(["endurance","endurancebuff","magic","magicbuff","level","scaling","lifebonus","manabonus","training","meditation","npcmultiplier"], function(values) {
-                // console.log("attribute acquisition working");
+        on("change:endurance change:endurancebuff change:magic change:magicbuff change:level change:scaling change:lifebonus change:manabonus change:training change:meditation change:npcmultiplier sheet:opened", () => {
+            getAttrs(["endurance","endurancebuff","magic","magicbuff","level","scaling","lifebonus","manabonus","training","meditation","npcmultiplier"], (values) => {
                 let tempEndurance = parseInt(values.endurance) || 0;
-                
+
                 let tempEnduranceBuff = parseInt(values.endurancebuff) || 0;
-                
+
                 let tempMagic = parseInt(values.magic);
-                
+
                 let tempMagicBuff = parseInt(values.magicbuff) || 0;
-                
+
                 let tempLevel = parseInt(values.level) || 0;
                 let tempLifeBonus = parseInt(values.lifebonus) || 0;
                 let tempManaBonus = parseInt(values.manabonus) || 0;
                 let tempTraining = parseInt(values.training) || 0;
                 let tempMeditation = parseInt(values.meditation) || 0;
                 let tempScaling = parseInt(values.scaling) || 0;
-                
+
                 let tempNPCMultiplier = parseInt(values.npcmultiplier) || 0;
-                
+
                 // Calcluate base HP
                 let tempHPMaximum = 32 + tempEndurance + tempEnduranceBuff + (tempScaling * 4);
                 // Add HP per level beyond 1st level
@@ -107,9 +234,7 @@
                 tempHPMaximum = tempHPMaximum + (tempLifeBonus * tempLevel) + tempTraining;
                 // Apply NPC multiplier
                 tempHPMaximum = tempHPMaximum * tempNPCMultiplier;
-                
-                //console.log("hp calc working" + tempHPMaximum);
-                
+
                 // Calculate base SP
                 let tempSPMaximum = 16 + tempMagic + tempMagicBuff - (tempScaling * 4);
                 // Add SP per level beyond 1st level
@@ -118,9 +243,7 @@
                 tempSPMaximum = tempSPMaximum + (tempManaBonus * tempLevel) + tempMeditation;
                 // Apply NPC multiplier
                 tempSPMaximum = tempSPMaximum * tempNPCMultiplier;
-                
-                //console.log("sp calc working");
-                
+
                 setAttrs({
                     "endurance" : tempEndurance,
                     "magic" : tempMagic,
@@ -129,7 +252,6 @@
                 });
             });
         });
-        
     </script>
     
     <!-- Ctrl + F shortcuts -->
