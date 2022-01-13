@@ -730,11 +730,16 @@ input[type="number"].sheet-full
     width: 100%;
 }
 
-
+/* IMAGES */
 
 .sheet-logo {
     max-height: 150px;
     min-width:  100px;
+    
+}
+
+.skill-potential-image {
+    max-width: 100px;
     
 }
 
@@ -931,4 +936,46 @@ input[type="number"].sheet-full
     opacity: 0;
     height: 0px;
     width: 0px;
+}
+
+.charsheet .grid-template {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+
+}
+
+.charsheet .grid-item-template {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .charsheet .skill-potential-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .skill-potential-label {
+    background-color: rgba(255, 255, 255, 0.74);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    align-content: center;
+    font-family: fantasy;
+
+
+}
+
+.charsheet .skill-potential-value {
+    background-color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+
 }
