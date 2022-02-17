@@ -300,8 +300,8 @@ div.sheet-core-content {
 	line-height: 16px;
 	font-weight: normal;
 	margin: 0;
-	color: #555;
-	background-color: white;
+	color: rgb(212, 212, 212);
+	background-color: rgb(49, 49, 49);
 	vertical-align: middle;
 	cursor: auto;
 	letter-spacing: normal;
@@ -357,7 +357,7 @@ div.sheet-core-content {
 .charsheet .sheet-wrapper input[readonly],
 .charsheet .sheet-wrapper select[readonly],
 .charsheet .sheet-wrapper textarea[readonly] {
-    background-color: #e7e7e7;
+    background-color: #383838;
     border-color: #aaa;
     cursor: not-allowed;
 }

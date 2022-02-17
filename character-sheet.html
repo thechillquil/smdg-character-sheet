@@ -399,8 +399,8 @@
 
                     <div class="skill-potential-grid">
 
-                        <label style="background-color:darkgray; text-align:center;">Trait Name</label>
-                        <label style="background-color:rgba(169, 169, 169, 0.726); text-align:center;">Tier</label>
+                        <label style="background-color:darkgray; text-align:center; color:white;">Trait Name</label>
+                        <label style="background-color:rgba(169, 169, 169, 0.726); text-align:center; color:white;">Tier</label>
                         <label style="background-color:rgba(169, 169, 169, 0.5); text-align:center; color:white;">Die Roll</label>
                         <label style="background-color:rgba(169, 169, 169, 0.253); text-align:center; color:white;">Description</label>
                         <label style="background-color:rgba(169, 169, 169, 0.103); text-align:center; color:white;">Short Description</label>
@@ -434,7 +434,7 @@
 
                 <fieldset class="repeating_skill">
 
-                    <div class="hp-sp-grid">
+                    <div class="hp-sp-grid" style="padding-top:15px; padding-bottom:15px;">
 
                         <!-- SKILL REPEATING LABELS -->
 
@@ -483,10 +483,10 @@
                         <label style="background-color:#f2d0fc; text-align:center;">Description</label>
                         <label style="background-color:#ffffff; text-align:center;">Short Desc.</label>
                         <label style="background-color:#ebaf0a; text-align:center;">Critical</label>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
 
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
 
                         <textarea name="attr_skill-repeating-description" style="max-height:60px;">???</textarea>
                         <input type="text" name="attr_skill-repeating-short-description" value="???"/>
@@ -499,9 +499,10 @@
                         </select>
 <!-- START OF SKILL DICE ROLL BUTTONS -->
 
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
+
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
 
     
                     </div>
@@ -536,15 +537,15 @@
 
                     <!-- SOCIAL STAT LABELS -->
 
-                    <label class="social-stat-label">Guts</label>
+                    <label class="social-stat-label" style="text-align:center;">Guts</label>
 
-                    <label class="social-stat-label">Knowledge</label>
+                    <label class="social-stat-label" style="text-align:center;">Knowledge</label>
 
-                    <label class="social-stat-label">Empathy</label>
+                    <label class="social-stat-label" style="text-align:center;">Empathy</label>
 
-                    <label class="social-stat-label">Proficiency</label>
+                    <label class="social-stat-label" style="text-align:center;">Proficiency</label>
 
-                    <label class="social-stat-label">Charm</label>
+                    <label class="social-stat-label" style="text-align:center;">Charm</label>
 
                     <!-- SOCIAL STAT BASE -->
 
@@ -634,15 +635,50 @@
 
                 <!-- HP DISPLAY AND CALCULATOR SECTION -->
 
-                <div class="four-column-grid" style="padding-top:15px; padding-bottom:15px;">
+                <div class="skill-potential-grid" style="padding-top:15px; padding-bottom:15px;">
 
-                    <span class="attr" name="attr_maxhp_max" title="@{hp}" style="font-weight:bold; color:#000000; text-align:center; background-color:#00ff00; font-size:20px; max-height:30px;">0</span>
-                    <label style="text-align:center; background-color:#85c285">Scaling</label>
-                    <label style="text-align:center; background-color:#4fa64f;">Life Bonus</label>
-                    <label style="text-align:center; background-color:#249225;">Training</label>
+                    <span class="attr" name="attr_maxhp_max" title="@{hp}" style="font-weight:bold; color:white; text-align:center; background-color:#3f943f; font-size:20px; max-height:30px; max-width:250px;">0</span>
 
-                    <input type="number" name="attr_maxhp" value="0" style="font-weight:bold; text-align:center; color:#000000; background-color:#c2ffc2; font-size:20px;"/>
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
 
+                    <label style="text-align:center; background-color:#244d24; color:white;">Life Bonus</label>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="text-align:center; background-color:#0d310d; color:white;">Training</label>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="text-align:center; background-color:#0d160d; color:white;">Scaling</label>
+
+                    <input type="number" name="attr_maxhp" value="0" style="font-weight:bold; text-align:center; color:white; background-color:#466646; font-size:20px; max-width:250px;"/>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select name="attr_lifebonus" style="text-align:center;">
+                        <option value="0">None</option>
+                        <option value="3">Life Bonus</option>
+                        <option value="3">Pumping Iron</option>
+                        <option value="5">Life Surge</option>
+                    </select>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <input type="number" name="attr_training" value="0" style="text-align:center; font-weight:bold;"/>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
 
                     <select name="attr_scaling" style="padding-left:5%; padding-right:5%; text-align:center;">
                         <option value="0">Well-Rounded</option>
@@ -652,57 +688,131 @@
                         <option value="-30">Undaunted</option>
                     </select>
 
-                    <select name="attr_lifebonus" style="text-align:center;">
-                        <option value="0">None</option>
-                        <option value="3">Life Bonus</option>
-                        <option value="3">Pumping Iron</option>
-                        <option value="5">Life Surge</option>
-                    </select>
-
-                    <input type="number" name="attr_training" value="0" style="text-align:center; font-weight:bold;"/>
-
                 </div>
 
                 <!-- SP DISPLAY AND CALCULATOR SECTION -->
 
-                <div class="sp-grid">
+                <div class="skill-potential-grid">
 
-                    <span class="attr" name="attr_maxsp_max" title="@{sp}" style="font-weight:bold; color:#000000; text-align:center; background-color:#fc46aa; font-size:20px; max-height:30px;">0</span>
-                    <label style="text-align:center; background-color:#c660ce;">Mana Bonus</label>
-                    <label style="text-align:center; background-color:#a03cae; font-weight:bold;">Meditation</label>
+                    <span class="attr" name="attr_maxsp_max" title="@{sp}" style="font-weight:bold; color:white; text-align:center; background-color:#a83976; font-size:20px; max-height:30px; max-width:250px;">0</span>
 
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
 
-                    <input type="number" name="attr_maxsp" value="0" style="text-align:center; color:#000000; background-color:#ffa2d5; font-size:20px;"/>
+                    <label style="text-align:center; background-color:#713475; color:white;">Mana Bonus</label>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="text-align:center; background-color:#441a49; font-weight:bold; color:white;">Meditation</label>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="background-color:black; color:black;">Wooooo</label>
+
+                    <input type="number" name="attr_maxsp" value="0" style="text-align:center; color:white; background-color:#773a5b; font-size:20px; max-width:250px;"/>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
                     <select name="attr_manabonus" style="text-align:center;">
                         <option value="0">None</option>
                         <option value="3">Mana Bonus</option>
                         <option value="3">Nirvana</option>
                         <option value="5">Mana Surge</option>
                     </select>
-                    <input type="number" name="attr_meditation" value="0" style="text-align:center;"/>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <input type="number" name="attr_meditation" value="0" style="text-align:center; font-weight:bold;"/>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select readonly name="attr_manabonus" style="text-align:center; background-color: black; border:black; color:black;">
+                        <option value="0">None</option>
+                        <option value="3">Mana Bonus</option>
+                        <option value="3">Nirvana</option>
+                        <option value="5">Mana Surge</option>
+                    </select>
 
                 </div>
+
+                <div style="max-height:10px;">
+                    &nbsp;
+                </div>
+
+                
 
                 <!-- START OF SHORT REST SECTION -->
-                <h3>Short Rests</h3>
+                <h3>Short Rests & Ammo</h3>
 
-                <div class="two-column-grid" style="padding-top:15px; padding-bottom:15px;">
+                <div class="sp-grid" style="padding-top:15px; padding-bottom:15px;">
 
-                    <input type="number" name="attr_shortrests" value="0" style="text-align:center; color:#000000; font-weight:bold; font-size:20px; background-color:#a0dbff;"/>
-                    <span class="attr" name="attr_shortrests_max" title="@{shortrests}" style="font-weight:bold; color:#000000; text-align:center; background-color:#26abff; font-size:20px; max-height:20px;">1</span>
+                    <label style="text-align:center; color:#ff0000; background-color:#242526;">Current</label>
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+                    <label style="text-align:center; color:#ff0000; background-color:#242526;">Maximum</label>
 
-                </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
 
-                <!-- START OF AMMO SECTION -->
-                <h3>Ammo</h3>
+                    <input type="number" name="attr_shortrests" value="0" style="text-align:center; color:white; font-size:20px; background-color:#3c4c57;"/>
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+                    <span class="attr" name="attr_shortrests_max" title="@{shortrests}" style="font-weight:bold; color:white; text-align:center; background-color:#316383; font-size:20px;">1</span>
 
-                <div class="two-column-grid" style="padding-top:15px; padding-bottom:15px;">
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
 
-                    <span class="attr" name="attr_ammo_max" title="@{ammo}" style="font-weight:400; color:#000000; font-size:20px; text-align:center; background-color:#ff0000;">0</span>
-                    <label style="text-align:center; color:#000000; background-color:#ce2b2b;">Firearm Type</label>
+                    <!-- START OF AMMO SECTION -->
 
-                    <input type="number" name="attr_ammo_max" value="0" style="text-align:center; color:#000000; font-size:20px; background-color:#ff9f9f;"/>
-                    <select name="attr_firearmtype" style="text-align:center;">
+
+                    <input type="number" name="attr_ammo" value="0" style="text-align:center; color:white; font-size:20px; background-color:#553737;"/>
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+                    <span class="attr" name="attr_ammo_max" title="@{ammo}" style="font-weight:400; color:white; font-weight:bold; font-size:20px; text-align:center; background-color:#913535;">0</span>
+
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="text-align:center; color:#ff0000; background-color:#242526;">Firearm Type</label>
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+                    <select name="attr_ammo_max" style="text-align:center;">
                         <option value="0">None</option>
                         <option value="6">Pistol</option>
                         <option value="10">Submachine Gun</option>
@@ -728,7 +838,8 @@
                     <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[3d6 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
 
                     <label style="background-color:#242526; text-align:center; color:#ff0000;">NPC Accuracy Mod</label>
-                    <input type="number" name="attr_npcaccuracymod" value="0"/>
+
+                    <input type="number" name="attr_npcaccuracymod" value="0" style="text-align:center;"/>
 
                     <label style="text-align:center; color:#ff0000; background-color:#242526;">Demon Ally?</label>
 
@@ -776,7 +887,8 @@
                 </div>
                     <div class="skill-potential-grid">
                     <select class="skill-potential-value" name="attr_skill-potential-physical" style="font-weight:bold;">
-                        <option value="">0</option>
+
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -793,7 +905,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-gun" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -810,7 +922,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-fire" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -827,7 +939,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-ice" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -844,7 +956,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-electric" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -861,7 +973,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-wind" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -878,7 +990,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-psychic" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -916,7 +1028,7 @@
                 </div>
                 <div class="skill-potential-grid">
                     <select class="skill-potential-value" name="attr_skill-potential-nuke" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -933,7 +1045,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-bless" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -950,7 +1062,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-curse" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -967,7 +1079,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-almighty" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -984,7 +1096,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-ailment" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -1001,7 +1113,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-healing" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -1014,7 +1126,7 @@
                         <option value="-5">-5</option>
                     </select>
                     <select class="skill-potential-value" name="attr_skill-potential-support" style="font-weight:bold;">
-                        <option value="">0</option>
+                        <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
                         <option value="+3">+3</option>
@@ -1056,10 +1168,10 @@
                         <select name="attr_meleeweapon-repeating-type">
                             <option value="0">Default</option>
                             <option value="5">Finesse</option>
-                            <option value="-5">Brute</option>
+                            <option value="(-5)">Brute</option>
                         </select>
                         <select name="attr_meleeweapon-repeating-bonus">
-                            <option value="0">None</option>
+                            <option value="0">-</option>
                             <option value="1">+1</option>
                             <option value="2">+2</option>
                             <option value="3">+3</option>
@@ -1108,7 +1220,7 @@
                             <option value="No additional effects.">Longbow</option>
                         </select>
                         <select name="attr_firearm-repeating-bonus">
-                            <option value="0">None</option>
+                            <option value="0">-</option>
                             <option value="1">+1</option>
                             <option value="2">+2</option>
                             <option value="3">+3</option>
@@ -1271,15 +1383,14 @@
                             <option value="Finished">Finished</option>
                         </select>
 
+
                     </div>
 
                 </fieldset>
 
-
                 <h3>Crafting Materials</h3>
                 <!-- START OF CRAFTING MATERIALS REPEATING SECTION -->
                 <fieldset class="repeating_craftingmaterials">
-
                     <div class="two-column-grid">
 
                         <label style="background-color:#666666; text-align:center;">Name</label>
@@ -1424,16 +1535,31 @@
 
                 </div>
 
-                <h3>Buffs and Debuffs</h3>
+                <h3>Buffs, Debuffs, & Conditions</h3>
                 <!-- START OF BUFF AND DEBUFF SECTION -->
-                <div class="four-column-grid" style="padding-top:10px; padding-bottom:10px;">
+                <div class="skill-potential-grid" style="padding-top:10px; padding-bottom:10px;">
 
-                    <label style="background-color:rgb(255, 0, 0); text-align:center;">Tarukaja/Tarunda</label>
-                    <label style="background-color:rgb(204, 0, 255); text-align:center;">Rakukaja/Rakunda</label>
-                    <label style="background-color:rgb(0, 255, 106); text-align:center;">Sukukaja/Sukunda</label>
-                    <label style="background-color:rgb(255, 238, 0); text-align:center;">Rebellion</label>
+                    <label style="background-color:rgb(175, 58, 58); text-align:center; color:white;">Tarukaja/Tarunda</label>
 
-                    <select name="attr_tarukaja">
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="background-color:rgb(157, 73, 179); text-align:center; color:white;">Rakukaja/Rakunda</label>
+                    
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="background-color:rgb(77, 165, 113); text-align:center; color:white;">Sukukaja/Sukunda</label>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <label style="background-color:rgb(161, 155, 71); text-align:center; color:white;">Rebellion</label>
+
+                    <select name="attr_tarukaja" style="background-color:rgb(221, 117, 117); text-align:center; color:white;">
                         <option value="0">None</option>
                         <option value="4">Tarukaja x1</option>
                         <option value="8">Tarukaja x2</option>
@@ -1444,7 +1570,12 @@
                         <option value="-12">Tarunda x3</option>
                         <option value="-16">Tarunda x4</option>
                     </select>
-                    <select name="attr_rakukaja">
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select name="attr_rakukaja" style="background-color:rgb(206, 131, 224); text-align:center; color:white;">
                         <option value="0">None</option>
                         <option value="4">Rakukaja x1</option>
                         <option value="8">Rakukaja x2</option>
@@ -1455,7 +1586,12 @@
                         <option value="-12">Rakunda x3</option>
                         <option value="-16">Rakunda x4</option>
                     </select>
-                    <select name="attr_sukukaja">
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select name="attr_sukukaja" style="background-color:rgb(131, 212, 165); text-align:center; color:white;">
                         <option value="0">None</option>
                         <option value="1">Sukukaja x1</option>
                         <option value="2">Sukukaja x2</option>
@@ -1466,7 +1602,12 @@
                         <option value="-3">Sukunda x3</option>
                         <option value="-4">Sukunda x4</option>
                     </select>
-                    <select name="attr_rebellion">
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select name="attr_rebellion" style="background-color:rgb(216, 210, 129); text-align:center; color:white;">
                         <option value="0">None</option>
                         <option value="1d10">Rebellion x1</option>
                         <option value="2d10">Rebellion x2</option>
@@ -1474,14 +1615,32 @@
                         <option value="4d10">Rebellion x4</option>
                     </select>
 
-                </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
+                    <div style="max-height:5px">
+                        &nbsp;
+                    </div>
 
-                <h3>Conditions</h3>
-                <!-- START OF CONDITIONS SECTION -->
-                <div class="four-column-grid" style="padding-top:10px; padding-bottom:10px;">
+                    <!-- START OF CONDITIONS SECTION -->
 
-                    <select name="attr_status-condition-1">
-                        <option value="">None</option>
+                    <select name="attr_status-condition-1" style="background-color:#725a78; color:white;">
+                        <option value="">Condition?</option>
                         <option value="[~Downed~] You are knocked off balance onto the ground. Your movement speed is reduced to 0 feet. Additionally, creatures who hit you with an attack while you are Downed may add their Luck stat to the damage roll. You recover from being Downed at the start of your turn. When a creature becomes Downed, they recover from all other conditions.">Downed</option>
                         <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the end of each of your turns.">Burn</option>
                         <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Freeze</option>
@@ -1504,8 +1663,13 @@
                         <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making basic Melee attacks against them. Damage dealt by your basic Melee attacks is doubled. All attack rolls made by you are made with disadvantage. At the start of your turn, roll 1d4. On a 4, you recover from the Condition.">Rage</option>
                         <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and your Turns are determined by the creature that Brainwashed you. At the start of your turn, flip a coin. If heads, you recover from the Condition.">Brainwash</option>
                     </select>
-                    <select name="attr_status-condition-2">
-                        <option value="">None</option>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select name="attr_status-condition-2" style="background-color:#725a78; color:white;">
+                        <option value="">Condition?</option>
                         <option value="[~Downed~] You are knocked off balance onto the ground. Your movement speed is reduced to 0 feet. Additionally, creatures who hit you with an attack while you are Downed may add their Luck stat to the damage roll. You recover from being Downed at the start of your turn. When a creature becomes Downed, they recover from all other conditions.">Downed</option>
                         <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the end of each of your turns.">Burn</option>
                         <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Freeze</option>
@@ -1528,8 +1692,13 @@
                         <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making basic Melee attacks against them. Damage dealt by your basic Melee attacks is doubled. All attack rolls made by you are made with disadvantage. At the start of your turn, roll 1d4. On a 4, you recover from the Condition.">Rage</option>
                         <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and your Turns are determined by the creature that Brainwashed you. At the start of your turn, flip a coin. If heads, you recover from the Condition.">Brainwash</option>
                     </select>
-                    <select name="attr_status-condition-3">
-                        <option value="">None</option>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
+
+                    <select name="attr_status-condition-3" style="background-color:#725a78; color:white;">
+                        <option value="">Condition?</option>
                         <option value="[~Downed~] You are knocked off balance onto the ground. Your movement speed is reduced to 0 feet. Additionally, creatures who hit you with an attack while you are Downed may add their Luck stat to the damage roll. You recover from being Downed at the start of your turn. When a creature becomes Downed, they recover from all other conditions.">Downed</option>
                         <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the end of each of your turns.">Burn</option>
                         <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Freeze</option>
@@ -1552,9 +1721,12 @@
                         <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making basic Melee attacks against them. Damage dealt by your basic Melee attacks is doubled. All attack rolls made by you are made with disadvantage. At the start of your turn, roll 1d4. On a 4, you recover from the Condition.">Rage</option>
                         <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and your Turns are determined by the creature that Brainwashed you. At the start of your turn, flip a coin. If heads, you recover from the Condition.">Brainwash</option>
                     </select>
+
+                    <div style="max-width:5px;">
+                        &nbsp;
+                    </div>
 
                     <button type="roll" name="roll-condition" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=Current Conditions}} {{subtitle=@{character-name}}} {{@{status-condition-1}}} {{@{status-condition-2}}} {{@{status-condition-3}}}">Description(s)</button>
-
                 </div>
 
                 <h3>Traits</h3>
@@ -1565,6 +1737,11 @@
 
                         <input readonly type="text" name="attr_trait-name" value="???" style="font-weight:bold; text-align:center; background-color:rgb(46, 46, 46); color:white;"/>
                         <input readonly type="text" name="attr_trait-short-description" value="???"/>
+
+                        <button type="roll" name="roll-trait" class="sheet-colouredheader-grey" value="&{template:custom} {{color=grey}} {{title=@{trait-name}}} {{subtitle=Trait}} {{desc=@{trait-description}}}">No Dice</button>
+                        <button type="roll" name="roll-trait" class="sheet-colouredheader-grey" value="&{template:custom} {{color=grey}} {{title=@{trait-name}}} {{subtitle=Trait}} {{[[@{trait-dice}]] [[@{trait-dice}]]}} {{desc=@{trait-description}}}">Dice Roll</button>
+                        <textarea name="attr_trait-description" style="max-height:10px; background-color:black; color:black; border:black; display:none;">???</textarea>
+                        <input readonly type="text" name="attr_trait-dice" value="1d0" style="display:none;"/>
 
                     </div>
 
@@ -1597,6 +1774,42 @@
                         </select>
                         <input readonly type="number" name="attr_skill-repeating-cost" value="0"/>
                         <input readonly type="text" name="attr_skill-repeating-short-description" value="???"/>
+
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
+                        <div>
+                            &nbsp;
+                        </div>
+
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
+
+
+                        <select name="attr_skill-repeating-potential" class="ptype" style="display:none;">
+                            <option value="0">-</option>
+                            <option value="1">+1</option>
+                            <option value="2">+2</option>
+                            <option value="3">+3</option>
+                            <option value="4">+4</option>
+                            <option value="5">+5</option>
+                            <option value="6">+6</option>
+                            <option value="7">+7</option>
+                            <option value="8">+8</option>
+                            <option value="9">+9</option>
+                        </select>
+                        <input type="text" name="attr_skill-repeating-range" value="5 feet" style="display:none;"/>
+                        <input type="text" name="attr_skill-repeating-dice" value="1d0" style="display:none;"/>
+
+                        <textarea name="attr_skill-repeating-description" style="max-height:60px; display:none;">???</textarea>
+                        <select name="attr_skill-repeating-critical" class="ptype" style="display:none;">
+                            <option value="0">-</option>
+                            <option value="1d10">1d10</option>
+                            <option value="2d10">2d10</option>
+                            <option value="3d10">3d10</option>
+                            <option value="4d10">4d10</option>
+                        </select>
 
                     </div>
 
