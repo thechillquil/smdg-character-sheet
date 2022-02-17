@@ -133,14 +133,9 @@ div.sheet-core-content {
 }
 
 .charsheet .sheet-wrapper button[type="roll"]{
-  background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904772824495960084/button_inactive.png); 
-  background-size: 48px 48px;
-  background-repeat: no-repeat;
-  width: 48px;
-  height: 48px;
-  border-style: none;
-  background-color: transparent;
-  margin-left: 5px;
+  background-color: whitesmoke;
+  color:black;
+  border-color:red;
 }
 
 .sheet-paragraph-box {
@@ -151,15 +146,13 @@ div.sheet-core-content {
 .charsheet .sheet-wrapper button[type="roll"]:hover,
 .charsheet .sheet-wrapper .sheet-btn:hover,
 .charsheet .sheet-wrapper .sheet-hider input[type=checkbox]:checked ~ .sheet-btn {
-	background-color: transparent; /* original was #8C001A, colour used for buttons */
-	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904772837640904734/button_active.png);
-	background-repeat: no-repeat;
-	border-color: none; /* original was #8C001A */
-	background-position: 0;
+	background-color: black; /* original was #8C001A, colour used for buttons */
+	border-color: red; /* original was #8C001A */
+    color:rgb(255, 0, 0);
 }
 
 .charsheet .sheet-wrapper .sheet-hider input[type=checkbox]:checked ~ .sheet-btn {
-	background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
+    display:none;
 }
 
 .charsheet .sheet-wrapper button[type="roll"] label,
@@ -307,8 +300,8 @@ div.sheet-core-content {
 	line-height: 16px;
 	font-weight: normal;
 	margin: 0;
-	color: #555;
-	background-color: white;
+	color: rgb(212, 212, 212);
+	background-color: rgb(49, 49, 49);
 	vertical-align: middle;
 	cursor: auto;
 	letter-spacing: normal;
@@ -355,6 +348,7 @@ div.sheet-core-content {
 	-ms-transition: border linear .2s,box-shadow linear .2s;
 	-o-transition: border linear .2s,box-shadow linear .2s;
 	transition: border linear .2s,box-shadow linear .2s;
+    display:none;
 }
 
 .charsheet .sheet-wrapper input[disabled],
@@ -363,7 +357,7 @@ div.sheet-core-content {
 .charsheet .sheet-wrapper input[readonly],
 .charsheet .sheet-wrapper select[readonly],
 .charsheet .sheet-wrapper textarea[readonly] {
-    background-color: #e7e7e7;
+    background-color: #383838;
     border-color: #aaa;
     cursor: not-allowed;
 }
@@ -816,6 +810,10 @@ input[type="number"].sheet-full
   --header-bg-color: rgba(255,222,99,0.75);
   --header-text-color: #000;
 }
+.sheet-rolltemplate-custom .sheet-container.sheet-color-gold {
+    --header-bg-color: #eda800;
+    --header-text-color: #000;
+  }
 .sheet-rolltemplate-custom .sheet-container.sheet-color-brown {
   --header-bg-color: rgba(101,67,33,0.75);
   --header-text-color: #FFF;
@@ -909,23 +907,27 @@ input[type="number"].sheet-full
 }
 
 .charsheet input[type=checkbox] {
-    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
+    display:none;
+    position:absolute;
+    opacity:0;
 }
 
 .charsheet input[type=checkbox] + label {
     height: 50px;
     width: 50px;
-    display:block;
+    display:inline-block;
     padding: 0 0 0 0px;
-    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836118443360276/radio_button_unselected.png);
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/940319265028984913/empty_turn_resize.png);
+    background-repeat: no-repeat;
 }
 
 .charsheet input[type=checkbox]:checked + label {
     height: 50px;
     width: 50px;
-    display:block;
+    display:inline-block;
     padding: 0 0 0 0px;
-    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/904836132469100564/radio_button_checked.png);
+    background-image: url(https://cdn.discordapp.com/attachments/900199385370071080/940319280661143552/gold_turn_resize.png);
+    background-repeat: no-repeat;
 }
 
 /* Playing around with checkbox-collapsible sections. */
@@ -952,11 +954,113 @@ input[type="number"].sheet-full
     padding: 20px;
     font-size: 30px;
     text-align: center;
-  }
+}
+/* TOP HEADER LABEL */
+.charsheet .top-header-label-1 {
+    background-color: rgba(255, 255, 255, 0.493);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .top-header-label-2 {
+    background-color: rgba(255, 255, 255, 0.575);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .top-header-label-3 {
+    background-color: rgba(255, 255, 255, 0.651);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .top-header-label-4 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .top-header-label-5 {
+    background-color: rgba(255, 255, 255, 0.925);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
 
   .charsheet .skill-potential-grid {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .nine-column-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .eight-column-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    padding: 10px;
+
+}
+
+
+  .charsheet .top-header-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .hp-sp-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .sp-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .four-column-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .two-column-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+
+}
+
+.charsheet .one-column-grid {
+    display: grid;
+    grid-template-columns: auto;
     padding: 10px;
 
 }
@@ -978,4 +1082,78 @@ input[type="number"].sheet-full
     text-align: center;
     font-weight: bold;
 
+}
+
+.charsheet .social-stat-label {
+    background-color: #eda800;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .social-stat-input {
+    background-color: #474747;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .social-stat-buff {
+    background-color: #474747;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.charsheet .combat-stat-span-1 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 150%;
+    text-align: center;
+    background-color: #ffa500;
+    font-size: 25px;
+}
+
+.charsheet .combat-stat-span-2 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 150%;
+    text-align: center;
+    background-color: #c660ce;
+    font-size: 25px;
+}
+
+.charsheet .combat-stat-span-3 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 150%;
+    text-align: center;
+    background-color: #7e7e7e;
+    font-size: 25px;
+}
+
+.charsheet .combat-stat-span-4 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 150%;
+    text-align: center;
+    background-color: #f2f2f2;
+    font-size: 25px;
+}
+
+.charsheet .combat-stat-span-5 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 150%;
+    text-align: center;
+    background-color: #fcdd00;
+    font-size: 25px;
 }
