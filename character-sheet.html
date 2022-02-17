@@ -483,6 +483,7 @@
                         <label style="background-color:#f2d0fc; text-align:center;">Description</label>
                         <label style="background-color:#ffffff; text-align:center;">Short Desc.</label>
                         <label style="background-color:#ebaf0a; text-align:center;">Critical</label>
+
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
@@ -497,6 +498,7 @@
                             <option value="4d10">4d10</option>
                         </select>
 <!-- START OF SKILL DICE ROLL BUTTONS -->
+
 
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
@@ -836,6 +838,7 @@
                     <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[3d6 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
 
                     <label style="background-color:#242526; text-align:center; color:#ff0000;">NPC Accuracy Mod</label>
+
                     <input type="number" name="attr_npcaccuracymod" value="0" style="text-align:center;"/>
 
                     <label style="text-align:center; color:#ff0000; background-color:#242526;">Demon Ally?</label>
@@ -884,6 +887,7 @@
                 </div>
                     <div class="skill-potential-grid">
                     <select class="skill-potential-value" name="attr_skill-potential-physical" style="font-weight:bold;">
+
                         <option value="">-</option>
                         <option value="+1">+1</option>
                         <option value="+2">+2</option>
@@ -1379,15 +1383,14 @@
                             <option value="Finished">Finished</option>
                         </select>
 
+
                     </div>
 
                 </fieldset>
 
-
                 <h3>Crafting Materials</h3>
                 <!-- START OF CRAFTING MATERIALS REPEATING SECTION -->
                 <fieldset class="repeating_craftingmaterials">
-
                     <div class="two-column-grid">
 
                         <label style="background-color:#666666; text-align:center;">Name</label>
@@ -1724,8 +1727,6 @@
                     </div>
 
                     <button type="roll" name="roll-condition" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=Current Conditions}} {{subtitle=@{character-name}}} {{@{status-condition-1}}} {{@{status-condition-2}}} {{@{status-condition-3}}}">Description(s)</button>
-
-
                 </div>
 
                 <h3>Traits</h3>
@@ -1809,7 +1810,6 @@
                             <option value="3d10">3d10</option>
                             <option value="4d10">4d10</option>
                         </select>
-
 
                     </div>
 
