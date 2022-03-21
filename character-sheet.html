@@ -475,6 +475,11 @@
                             <option value="7">+7</option>
                             <option value="8">+8</option>
                             <option value="9">+9</option>
+                            <option value="{-1}">-1</option>
+                            <option value="{-2}">-2</option>
+                            <option value="{-3}">-3</option>
+                            <option value="{-4}">-4</option>
+                            <option value="{-5}">-5</option>
                         </select>
                         <input type="number" name="attr_skill-repeating-cost" value="0"/>
                         <input type="text" name="attr_skill-repeating-range" value="5 feet"/>
@@ -495,11 +500,17 @@
                             <option value="2d10">2d10</option>
                             <option value="3d10">3d10</option>
                             <option value="4d10">4d10</option>
+                            <option value="5d10">5d10</option>
+                            <option value="6d10">6d10</option>
+                            <option value="7d10">7d10</option>
+                            <option value="8d10">8d10</option>
+                            <option value="9d10">9d10</option>
+                            <option value="10d10">10d10</option>
                         </select>
 <!-- START OF SKILL DICE ROLL BUTTONS -->
 
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
 
     
@@ -882,8 +893,6 @@
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058425473290320/electric_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058447396925450/wind_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058469777707008/psychic_icon.png"/>
-                </div>
-                <div class="skill-potential-grid">
                     <span class="skill-potential-label" style="background-color:#ffa500; font-weight:bold;">Physical</span>
                     <span class="skill-potential-label" style="background-color:#ffa500; font-weight:bold;">Gun</span>
                     <span class="skill-potential-label" style="background-color:orangered; font-weight:bold;">Fire</span>
@@ -891,8 +900,6 @@
                     <span class="skill-potential-label" style="background-color:#ffe800; font-weight:bold;">Electric</span>
                     <span class="skill-potential-label" style="background-color:#86dc3d; font-weight:bold;">Wind</span>
                     <span class="skill-potential-label" style="background-color:#d34dd2; font-weight:bold;">Psychic</span>
-                </div>
-                    <div class="skill-potential-grid">
                     <select class="skill-potential-value" name="attr_skill-potential-physical" style="font-weight:bold;">
                         <option value="">-</option>
                         <option value="+1">+1</option>
@@ -1012,9 +1019,6 @@
                         <option value="-4">-4</option>
                         <option value="-5">-5</option>
                     </select>
-                </div>
-
-                <div class="skill-potential-grid">
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058496549965824/nuke_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058550262235176/bless_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058567093977158/curse_icon.png"/>
@@ -1022,8 +1026,6 @@
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/931218906436214834/ailment_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/931218861250973726/healing_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/931218764014444574/support_icon.png"/>
-                </div>
-                <div class="skill-potential-grid">
                     <span class="skill-potential-label" style="background-color:cyan; font-weight:bold;">Nuke</span>
                     <span class="skill-potential-label" style="background-color:#fefebe; font-weight:bold;">Bless</span>
                     <span class="skill-potential-label" style="background-color:red; font-weight:bold; color:white;">Curse</span>
@@ -1031,8 +1033,6 @@
                     <span class="skill-potential-label" style="background-color:darkorchid; font-weight:bold; color:white;">Ailment</span>
                     <span class="skill-potential-label" style="background-color:limegreen; font-weight:bold;">Healing</span>
                     <span class="skill-potential-label" style="background-color:blue; font-weight:bold; color:white;">Support</span>
-                </div>
-                <div class="skill-potential-grid">
                     <select class="skill-potential-value" name="attr_skill-potential-nuke" style="font-weight:bold;">
                         <option value="">-</option>
                         <option value="+1">+1</option>
@@ -1161,14 +1161,16 @@
 
                 <h3>Melee Weapons</h3>
                 <!-- START OF MELEE WEAPON REPEATING LIST -->
+                <div class="four-column-grid">
+                    <label style="background-color:#ff0000; text-align:center;">Name</label>
+                    <label style="background-color:#ff3434; text-align:center;">Type</label>
+                    <label style="background-color:#ff5d5d; text-align:center;">Bonus</label>
+                    <label style="background-color:#ff8c8c; text-align:center;">Equipped?</label>
+                </div>
+
                 <fieldset class="repeating_meleeweapon">
 
                     <div class="four-column-grid">
-
-                        <label style="background-color:#ff0000; text-align:center;">Name</label>
-                        <label style="background-color:#ff3434; text-align:center;">Type</label>
-                        <label style="background-color:#ff5d5d; text-align:center;">Bonus</label>
-                        <label style="background-color:#ff8c8c; text-align:center;">Equipped?</label>
 
                         <input type="text" name="attr_meleeweapon-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_meleeweapon-repeating-type">
@@ -1204,16 +1206,18 @@
 
                 <h3>Firearms</h3>
                 <!-- START OF FIREARMS REPEATING LIST -->
+                <div class="hp-sp-grid">
+                    <label style="background-color:#ff0000; text-align:center;">Name</label>
+                    <label style="background-color:#ff3434; text-align:center;">Type</label>
+                    <label style="background-color:#ff5d5d; text-align:center;">Bonus</label>
+                    <label style="background-color:#ff8c8c; text-align:center;">Range</label>
+                    <label style="background-color:#ffc1c1; text-align:center;">Damage</label>
+                    <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
+                </div>
+
                 <fieldset class="repeating_firearm">
 
                     <div class="hp-sp-grid">
-
-                        <label style="background-color:#ff0000; text-align:center;">Name</label>
-                        <label style="background-color:#ff3434; text-align:center;">Type</label>
-                        <label style="background-color:#ff5d5d; text-align:center;">Bonus</label>
-                        <label style="background-color:#ff8c8c; text-align:center;">Range</label>
-                        <label style="background-color:#ffc1c1; text-align:center;">Damage</label>
-                        <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
 
                         <input type="text" name="attr_firearm-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_firearm-repeating-type">
@@ -1255,18 +1259,18 @@
 
                 <h3>Armor</h3>
                 <!-- START OF ARMOR REPEATING LIST -->
+                <div class="hp-sp-grid">
+                    <label style="background-color:#ff0000; text-align:center;">Name</label>
+                    <label style="background-color:#ff5d5d; text-align:center;">Rarity</label>
+                    <label style="background-color:#ff8c8c; text-align:center;">Description</label>
+                    <label style="background-color:#ffc1c1; text-align:center;">Value</label>
+                    <label style="background-color:#ffd4d4; text-align:center;">Dice</label>
+                    <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
+                </div>
+
                 <fieldset class="repeating_armor">
 
-                    <div class="skill-potential-grid">
-
-                        <label style="background-color:#ff0000; text-align:center;">Name</label>
-                        <label style="background-color:#ff5d5d; text-align:center;">Rarity</label>
-                        <label style="background-color:#ff8c8c; text-align:center;">Description</label>
-                        <label style="background-color:#ffc1c1; text-align:center;">Value</label>
-                        <label style="background-color:#ffd4d4; text-align:center;">Dice</label>
-                        <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
-                        <button type="roll" name="roll-armor-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{armor-repeating-name}}} {{subtitle=@{armor-repeating-rarity}}} {{Dice=[[@{armor-repeating-dice}]]}} {{desc=@{armor-repeating-description}}}">Send to Chat!</button>
-
+                    <div class="hp-sp-grid">
 
                         <input type="text" name="attr_armor-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_armor-repeating-rarity">
@@ -1274,7 +1278,7 @@
                             <option value="Rare">Rare</option>
                             <option value="Legendary">Legendary</option>
                         </select>
-                        <textarea name="attr_armor-repeating-description" style="max-height:60px;">???</textarea>
+                        <textarea name="attr_armor-repeating-description" style="max-height:20px;">???</textarea>
                         <input type="text" name="attr_armor-repeating-value" value="??? Macca" style="text-align:center;"/>
                         <input type="text" name="attr_armor-repeating-dice" value="1d0" style="text-align:center;"/>
                         <select name="attr_armor-repeating-equipped">
@@ -1282,21 +1286,25 @@
                             <option value="Equipped">Equipped</option>
                         </select>
 
+                        <button type="roll" name="roll-armor-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{armor-repeating-name}}} {{subtitle=@{armor-repeating-rarity}}} {{Dice=[[@{armor-repeating-dice}]]}} {{desc=@{armor-repeating-description}}}">Send to Chat!</button>
+
                     </div>
 
                 </fieldset>
 
                 <h3>Accessory</h3>
                 <!-- START OF ACCESSORY REPEATING LIST -->
+                <div class="top-header-grid">
+                    <label style="background-color:#ff0000; text-align:center;">Name</label>
+                    <label style="background-color:#ff5d5d; text-align:center;">Rarity</label>
+                    <label style="background-color:#ff8c8c; text-align:center;">Description</label>
+                    <label style="background-color:#ffc1c1; text-align:center;">Value</label>
+                    <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
+                </div>
+
                 <fieldset class="repeating_accessory">
 
                     <div class="top-header-grid">
-
-                        <label style="background-color:#ff0000; text-align:center;">Name</label>
-                        <label style="background-color:#ff5d5d; text-align:center;">Rarity</label>
-                        <label style="background-color:#ff8c8c; text-align:center;">Description</label>
-                        <label style="background-color:#ffc1c1; text-align:center;">Value</label>
-                        <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
 
                         <input type="text" name="attr_accessory-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_accessory-repeating-rarity">
@@ -1304,7 +1312,7 @@
                             <option value="Rare">Rare</option>
                             <option value="Legendary">Legendary</option>
                         </select>
-                        <textarea name="attr_accessory-repeating-description" style="max-height:60px;">???</textarea>
+                        <textarea name="attr_accessory-repeating-description" style="max-height:40px;">???</textarea>
                         <input type="text" name="attr_accessory-repeating-value" value="??? Macca" style="text-align:center;"/>
                         <select name="attr_accessory-repeating-equipped">
                             <option value="Not Equipped">-</option>
@@ -1317,19 +1325,19 @@
 
                 <h3>Consumables</h3>
                 <!-- START OF CONSUMABLE REPEATING LIST -->
+                <div class="skill-potential-grid">
+                    <label style="background-color:#26abff; text-align:center;">Name</label>
+                    <label style="background-color:#46b8ff; text-align:center;">Rarity</label>
+                    <label style="background-color:#7accff; text-align:center;">Value</label>
+                    <label style="background-color:#91d5ff; text-align:center;">Number Held</label>
+                    <label style="background-color:#a2dbff; text-align:center;">Range</label>
+                    <label style="background-color:#d0edff; text-align:center;">Dice</label>
+                    <label style="background-color:#ffffff; text-align:center;">Description</label>
+                </div>
+
                 <fieldset class="repeating_consumable">
 
-                    <div class="eight-column-grid">
-
-                        <label style="background-color:#26abff; text-align:center;">Name</label>
-                        <label style="background-color:#46b8ff; text-align:center;">Rarity</label>
-                        <label style="background-color:#7accff; text-align:center;">Value</label>
-                        <label style="background-color:#91d5ff; text-align:center;">Number Held</label>
-                        <label style="background-color:#a2dbff; text-align:center;">Range</label>
-                        <label style="background-color:#d0edff; text-align:center;">Dice</label>
-                        <label style="background-color:#ffffff; text-align:center;">Description</label>
-                        <button type="roll" name="roll-consumable-repeating" class="sheet-colouredheader-blue" value="&{template:custom} {{color=blue}} {{title=@{consumable-repeating-name}}} {{subtitle=@{consumable-repeating-rarity}}} {{Range=@{consumable-repeating-range}}} {{Dice=[[@{consumable-repeating-dice}]]}} {{desc=@{consumable-repeating-description}}}">Send to Chat!</button>
-
+                    <div class="skill-potential-grid">
 
                         <input type="text" name="attr_consumable-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_consumable-repeating-rarity">
@@ -1341,7 +1349,9 @@
                         <input type="number" name="attr_consumable-repeating-held" value="1" style="text-align:center;"/>
                         <input type="text" name="attr_consumable-repeating-range" value="5 feet" style="text-align:center;"/>
                         <input type="text" name="attr_consumable-repeating-dice" value="1d0" style="text-align:center;"/>
-                        <textarea name="attr_consumable-repeating-description" style="max-height:60px;">???</textarea>
+                        <textarea name="attr_consumable-repeating-description" style="max-height:40px;">???</textarea>
+
+                        <button type="roll" name="roll-consumable-repeating" class="sheet-colouredheader-blue" value="&{template:custom} {{color=blue}} {{title=@{consumable-repeating-name}}} {{subtitle=@{consumable-repeating-rarity}}} {{Range=@{consumable-repeating-range}}} {{Dice=[[@{consumable-repeating-dice}]]}} {{desc=@{consumable-repeating-description}}}">Send to Chat!</button>
 
                     </div>
 
@@ -1351,16 +1361,18 @@
 
                 <!-- START OF KEY ITEMS REPEATING LIST -->
 
+                <div class="two-column-grid">
+                    <label style="background-color:#01b136; text-align:center;">Name</label>
+                    <label style="background-color:#4eeb7d; text-align:center;">Description</label>
+                    
+                </div>
+
                 <fieldset class="repeating_keyitem">
 
-                    <div class="sp-grid">
-
-                        <label style="background-color:#01b136; text-align:center;">Name</label>
-                        <label style="background-color:#4eeb7d; text-align:center;">Description</label>
-                        <button type="roll" name="roll-consumable-repeating" class="sheet-colouredheader-green" value="&{template:custom} {{color=green}} {{title=@{keyitem-repeating-name}}} {{desc=@{keyitem-repeating-description}}}">Send to Chat!</button>
-
+                    <div class="two-column-grid">
                         <input type="text" name="attr_keyitem-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
-                        <textarea name="attr_keyitem-repeating-description" style="max-height:60px;">???</textarea>
+                        <textarea name="attr_keyitem-repeating-description" style="max-height:20px;">???</textarea>
+                        <button type="roll" name="roll-consumable-repeating" class="sheet-colouredheader-green" value="&{template:custom} {{color=green}} {{title=@{keyitem-repeating-name}}} {{desc=@{keyitem-repeating-description}}}">Send to Chat!</button>
 
                     </div>
                     
@@ -1369,21 +1381,23 @@
                 <h3>Books, Games, & DVDs</h3>
                 <!-- START OF BOOK GAME DVD REPEATING SECTION -->
 
+                <div class="top-header-grid">
+                    <label style="background-color:#ebaf0a; text-align:center;">Name</label>
+                    <label style="background-color:#e7b93b; text-align:center;">Total Sections</label>
+                    <label style="background-color:#e7c465; text-align:center;">Completed Sections</label>
+                    <label style="background-color:#ebd59b; text-align:center;">Benefits</label>
+                    <label style="background-color:#e9e0c9; text-align:center;">Finished?</label>
+                </div>
+
                 <fieldset class="repeating_bookgamedvd">
 
                     <div class="top-header-grid">
-
-                        <label style="background-color:#ebaf0a; text-align:center;">Name</label>
-                        <label style="background-color:#e7b93b; text-align:center;">Total Sections</label>
-                        <label style="background-color:#e7c465; text-align:center;">Completed Sections</label>
-                        <label style="background-color:#ebd59b; text-align:center;">Benefits</label>
-                        <label style="background-color:#e9e0c9; text-align:center;">Finished?</label>
 
 
                         <input type="text" name="attr_bookgamedvd-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <input type="number" name="attr_bookgamedvd-repeating-maxsections" value="1" style="text-align:center;"/>
                         <input type="number" name="attr_bookgamedvd-repeating-completedsections" value="1" style="text-align:center;"/>
-                        <textarea name="attr_bookgamedvd-repeating-benefits" style="max-height:60px;">???</textarea>
+                        <textarea name="attr_bookgamedvd-repeating-benefits" style="max-height:40px;">???</textarea>
                         <select name="attr_bookgamedvd-repeating-finished">
                             <option value="Unfinished">Unfinished</option>
                             <option value="Finished">Finished</option>
@@ -1396,12 +1410,15 @@
 
                 <h3>Crafting Materials</h3>
                 <!-- START OF CRAFTING MATERIALS REPEATING SECTION -->
+
+                <div class="two-column-grid">
+                    <label style="background-color:#666666; text-align:center;">Name</label>
+                    <label style="background-color:#afafaf; text-align:center;">Held</label>
+                </div>
+
                 <fieldset class="repeating_craftingmaterials">
 
                     <div class="two-column-grid">
-
-                        <label style="background-color:#666666; text-align:center;">Name</label>
-                        <label style="background-color:#afafaf; text-align:center;">Held</label>
 
                         <input type="text" name="attr_craftingmaterials-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <input type="number" name="attr_craftingmaterials-repeating-held" value="1" style="font-weight:bold; text-align:center;"/>
@@ -1412,14 +1429,17 @@
 
                 <h3>Skill Cards</h3>
                 <!-- START OF SKILL CARDS REPEATING SECTION -->
+
+                <div class="four-column-grid">
+                    <label style="background-color:#700791; text-align:center; color:white;">Skill Name</label>
+                    <label style="background-color:#8a15ad; text-align:center; color:white;">Type</label>
+                    <label style="background-color:#a93bca; text-align:center; color:white;">Tier</label>
+                    <label style="background-color:#bc70d3; text-align:center;">Held</label>
+                </div>
+
                 <fieldset class="repeating_skillcard">
 
                     <div class="four-column-grid">
-
-                        <label style="background-color:#700791; text-align:center; color:white;">Skill Name</label>
-                        <label style="background-color:#8a15ad; text-align:center; color:white;">Type</label>
-                        <label style="background-color:#a93bca; text-align:center; color:white;">Tier</label>
-                        <label style="background-color:#bc70d3; text-align:center;">Held</label>
 
                         <input type="text" name="attr_skillcard-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_skillcard-repeating-type">
@@ -1453,14 +1473,18 @@
 
                 <h3>Bonds</h3>
                 <!-- START OF BONDS REPEATING SECTION -->
+                <!-- The labels are outside of the repeating list, but must use the same grid in order
+                for it to not be repeated in the section -->
+
+                <div class="sp-grid">
+                    <label style="background-color:#1f1f1f; text-align:center; color:white;">Character Name</label>
+                    <label style="background-color:#3d3d3d; text-align:center; color:white;">Arcana</label>
+                    <label style="background-color:#5c5c5c; text-align:center; color:white;">Bond Level/Arcana Burst</label>
+                </div>
 
                 <fieldset class="repeating_bonds">
 
-                    <div>
-
-                        <label style="background-color:#1f1f1f; text-align:center; color:white;">Character Name</label>
-                        <label style="background-color:#3d3d3d; text-align:center; color:white;">Arcana</label>
-                        <label style="background-color:#5c5c5c; text-align:center; color:white;">Bond Level/Arcana Burst</label>
+                    <div class="sp-grid">
 
                         <input type="text" name="attr_bonds-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <select name="attr_bonds-repeating-arcana">
@@ -1791,8 +1815,8 @@
                             &nbsp;
                         </div>
 
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
 
                         <select name="attr_skill-repeating-potential" class="ptype" style="display:none;">
@@ -1806,6 +1830,11 @@
                             <option value="7">+7</option>
                             <option value="8">+8</option>
                             <option value="9">+9</option>
+                            <option value="{-1}">-1</option>
+                            <option value="{-2}">-2</option>
+                            <option value="{-3}">-3</option>
+                            <option value="{-4}">-4</option>
+                            <option value="{-5}">-5</option>
                         </select>
                         <input type="text" name="attr_skill-repeating-range" value="5 feet" style="display:none;"/>
                         <input type="text" name="attr_skill-repeating-dice" value="1d0" style="display:none;"/>
@@ -1817,6 +1846,12 @@
                             <option value="2d10">2d10</option>
                             <option value="3d10">3d10</option>
                             <option value="4d10">4d10</option>
+                            <option value="5d10">5d10</option>
+                            <option value="6d10">6d10</option>
+                            <option value="7d10">7d10</option>
+                            <option value="8d10">8d10</option>
+                            <option value="9d10">9d10</option>
+                            <option value="10d10">10d10</option>
                         </select>
 
 
