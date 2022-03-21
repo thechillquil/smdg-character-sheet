@@ -488,6 +488,7 @@
                         <label style="background-color:#f2d0fc; text-align:center;">Description</label>
                         <label style="background-color:#ffffff; text-align:center;">Short Desc.</label>
                         <label style="background-color:#ebaf0a; text-align:center;">Critical</label>
+
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
@@ -847,6 +848,7 @@
                     <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[3d6 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
 
                     <label style="background-color:#242526; text-align:center; color:#ff0000;">NPC Accuracy Mod</label>
+
                     <input type="number" name="attr_npcaccuracymod" value="0" style="text-align:center;"/>
 
                     <label style="text-align:center; color:#ff0000; background-color:#242526;">Demon Ally?</label>
@@ -893,6 +895,7 @@
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058425473290320/electric_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058447396925450/wind_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058469777707008/psychic_icon.png"/>
+
                     <span class="skill-potential-label" style="background-color:#ffa500; font-weight:bold;">Physical</span>
                     <span class="skill-potential-label" style="background-color:#ffa500; font-weight:bold;">Gun</span>
                     <span class="skill-potential-label" style="background-color:orangered; font-weight:bold;">Fire</span>
@@ -900,6 +903,7 @@
                     <span class="skill-potential-label" style="background-color:#ffe800; font-weight:bold;">Electric</span>
                     <span class="skill-potential-label" style="background-color:#86dc3d; font-weight:bold;">Wind</span>
                     <span class="skill-potential-label" style="background-color:#d34dd2; font-weight:bold;">Psychic</span>
+
                     <select class="skill-potential-value" name="attr_skill-potential-physical" style="font-weight:bold;">
                         <option value="">-</option>
                         <option value="+1">+1</option>
@@ -1026,6 +1030,7 @@
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/931218906436214834/ailment_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/931218861250973726/healing_icon.png"/>
                     <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/931218764014444574/support_icon.png"/>
+
                     <span class="skill-potential-label" style="background-color:cyan; font-weight:bold;">Nuke</span>
                     <span class="skill-potential-label" style="background-color:#fefebe; font-weight:bold;">Bless</span>
                     <span class="skill-potential-label" style="background-color:red; font-weight:bold; color:white;">Curse</span>
@@ -1033,6 +1038,7 @@
                     <span class="skill-potential-label" style="background-color:darkorchid; font-weight:bold; color:white;">Ailment</span>
                     <span class="skill-potential-label" style="background-color:limegreen; font-weight:bold;">Healing</span>
                     <span class="skill-potential-label" style="background-color:blue; font-weight:bold; color:white;">Support</span>
+
                     <select class="skill-potential-value" name="attr_skill-potential-nuke" style="font-weight:bold;">
                         <option value="">-</option>
                         <option value="+1">+1</option>
@@ -1285,7 +1291,6 @@
                             <option value="Not Equipped">-</option>
                             <option value="Equipped">Equipped</option>
                         </select>
-
                         <button type="roll" name="roll-armor-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{armor-repeating-name}}} {{subtitle=@{armor-repeating-rarity}}} {{Dice=[[@{armor-repeating-dice}]]}} {{desc=@{armor-repeating-description}}}">Send to Chat!</button>
 
                     </div>
@@ -1294,6 +1299,7 @@
 
                 <h3>Accessory</h3>
                 <!-- START OF ACCESSORY REPEATING LIST -->
+
                 <div class="top-header-grid">
                     <label style="background-color:#ff0000; text-align:center;">Name</label>
                     <label style="background-color:#ff5d5d; text-align:center;">Rarity</label>
@@ -1301,7 +1307,7 @@
                     <label style="background-color:#ffc1c1; text-align:center;">Value</label>
                     <label style="background-color:#fff2f2; text-align:center;">Equipped?</label>
                 </div>
-
+              
                 <fieldset class="repeating_accessory">
 
                     <div class="top-header-grid">
@@ -1325,6 +1331,7 @@
 
                 <h3>Consumables</h3>
                 <!-- START OF CONSUMABLE REPEATING LIST -->
+
                 <div class="skill-potential-grid">
                     <label style="background-color:#26abff; text-align:center;">Name</label>
                     <label style="background-color:#46b8ff; text-align:center;">Rarity</label>
@@ -1349,6 +1356,7 @@
                         <input type="number" name="attr_consumable-repeating-held" value="1" style="text-align:center;"/>
                         <input type="text" name="attr_consumable-repeating-range" value="5 feet" style="text-align:center;"/>
                         <input type="text" name="attr_consumable-repeating-dice" value="1d0" style="text-align:center;"/>
+
                         <textarea name="attr_consumable-repeating-description" style="max-height:40px;">???</textarea>
 
                         <button type="roll" name="roll-consumable-repeating" class="sheet-colouredheader-blue" value="&{template:custom} {{color=blue}} {{title=@{consumable-repeating-name}}} {{subtitle=@{consumable-repeating-rarity}}} {{Range=@{consumable-repeating-range}}} {{Dice=[[@{consumable-repeating-dice}]]}} {{desc=@{consumable-repeating-description}}}">Send to Chat!</button>
@@ -1393,11 +1401,12 @@
 
                     <div class="top-header-grid">
 
-
                         <input type="text" name="attr_bookgamedvd-repeating-name" value="???" style="font-weight:bold; text-align:center;"/>
                         <input type="number" name="attr_bookgamedvd-repeating-maxsections" value="1" style="text-align:center;"/>
                         <input type="number" name="attr_bookgamedvd-repeating-completedsections" value="1" style="text-align:center;"/>
+
                         <textarea name="attr_bookgamedvd-repeating-benefits" style="max-height:40px;">???</textarea>
+
                         <select name="attr_bookgamedvd-repeating-finished">
                             <option value="Unfinished">Unfinished</option>
                             <option value="Finished">Finished</option>
@@ -1406,7 +1415,6 @@
                     </div>
 
                 </fieldset>
-
 
                 <h3>Crafting Materials</h3>
                 <!-- START OF CRAFTING MATERIALS REPEATING SECTION -->
@@ -1473,6 +1481,7 @@
 
                 <h3>Bonds</h3>
                 <!-- START OF BONDS REPEATING SECTION -->
+              
                 <!-- The labels are outside of the repeating list, but must use the same grid in order
                 for it to not be repeated in the section -->
 
@@ -1759,7 +1768,6 @@
 
                     <button type="roll" name="roll-condition" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=Current Conditions}} {{subtitle=@{character-name}}} {{@{status-condition-1}}} {{@{status-condition-2}}} {{@{status-condition-3}}}">Description(s)</button>
 
-
                 </div>
 
                 <h3>Traits</h3>
@@ -1853,8 +1861,6 @@
                             <option value="9d10">9d10</option>
                             <option value="10d10">10d10</option>
                         </select>
-
-
                     </div>
 
                 </fieldset>
