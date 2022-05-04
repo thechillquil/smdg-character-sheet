@@ -488,9 +488,9 @@
                         <label style="background-color:#f2d0fc; text-align:center;">Description</label>
                         <label style="background-color:#ffffff; text-align:center;">Short Desc.</label>
                         <label style="background-color:#ebaf0a; text-align:center;">Critical</label>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
 
                         <textarea name="attr_skill-repeating-description" style="max-height:60px;">???</textarea>
                         <input type="text" name="attr_skill-repeating-short-description" value="???"/>
@@ -509,8 +509,8 @@
                         </select>
 <!-- START OF SKILL DICE ROLL BUTTONS -->
 
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
 
     
@@ -582,15 +582,15 @@
 
                     <!-- SOCIAL STAT BUTTONS -->
 
-                    <button type="roll" name="roll_social-guts" value="&{template:custom} {{title=Guts}} {{subtitle=Social}} {{Total= [[3d6+@{guts}+@{gutsbuff}]] [[3d6+@{guts}+@{gutsbuff}]]}} {{color=gold}}">Send to Chat</button>
+                    <button type="roll" name="roll_social-guts" value="&{template:custom} {{title=Guts}} {{subtitle=Social}} {{Total= [[1d20 + @{guts}+@{gutsbuff}]] [[1d20 + @{guts}+@{gutsbuff}]]}} {{color=gold}}">Send to Chat</button>
 
-                    <button type="roll" name="roll_social-knowledge" value="&{template:custom} {{title=Knowledge}} {{subtitle=Social}} {{Total= [[3d6+@{knowledge}+@{knowledgebuff}]] [[3d6+@{knowledge}+@{knowledgebuff}]]}} {{color=gold}}">Send to Chat</button>
+                    <button type="roll" name="roll_social-knowledge" value="&{template:custom} {{title=Knowledge}} {{subtitle=Social}} {{Total= [[1d20 + @{knowledge}+@{knowledgebuff}]] [[1d20 + @{knowledge} + @{knowledgebuff}]]}} {{color=gold}}">Send to Chat</button>
 
-                    <button type="roll" name="roll_social-empathy" value="&{template:custom} {{title=Empathy}} {{subtitle=Social}} {{Total= [[3d6+@{empathy}+@{empathybuff}]] [[3d6+@{empathy}+@{empathybuff}]]}} {{color=gold}}">Send to Chat</button>
+                    <button type="roll" name="roll_social-empathy" value="&{template:custom} {{title=Empathy}} {{subtitle=Social}} {{Total= [[1d20 + @{empathy}+@{empathybuff}]] [[1d20 + @{empathy} + @{empathybuff}]]}} {{color=gold}}">Send to Chat</button>
 
-                    <button type="roll" name="roll_social-proficiency" value="&{template:custom} {{title=Proficiency}} {{subtitle=Social}} {{Total= [[3d6+@{proficiency}+@{proficiencybuff}]] [[3d6+@{proficiency}+@{proficiencybuff}]]}} {{color=gold}}">Send to Chat</button>
+                    <button type="roll" name="roll_social-proficiency" value="&{template:custom} {{title=Proficiency}} {{subtitle=Social}} {{Total= [[1d20 + @{proficiency}+@{proficiencybuff}]] [[1d20 + @{proficiency} + @{proficiencybuff}]]}} {{color=gold}}">Send to Chat</button>
 
-                    <button type="roll" name="roll_social-charm" value="&{template:custom} {{title=Charm}} {{subtitle=Social}} {{Total= [[3d6+@{charm}+@{charmbuff}]] [[3d6+@{charm}+@{charmbuff}]]}} {{color=gold}}">Send to Chat</button>
+                    <button type="roll" name="roll_social-charm" value="&{template:custom} {{title=Charm}} {{subtitle=Social}} {{Total= [[1d20 + @{charm} + @{charmbuff}]] [[1d20 + @{charm} + @{charmbuff}]]}} {{color=gold}}">Send to Chat</button>
 
                 </div>
 
@@ -844,7 +844,7 @@
                         <option value="5">+5 Initiative Bonus</option>
                         <option value="10">+10 Initiative Bonus</option>
                     </select>
-                    <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[3d6 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
+                    <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[1d20 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
 
                     <label style="background-color:#242526; text-align:center; color:#ff0000;">NPC Accuracy Mod</label>
                     <input type="number" name="attr_npcaccuracymod" value="0" style="text-align:center;"/>
@@ -1195,10 +1195,10 @@
                             <option value="Equipped">Equipped</option>
                         </select>
 
-                        <button type="roll" name="roll-meleeweapon-repeating-1" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}}">Attack x1</button>
-                        <button type="roll" name="roll-meleeweapon-repeating-2" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage 1=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 2=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}}">Attack x2</button>
-                        <button type="roll" name="roll-meleeweapon-repeating-3" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage 1=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 2=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 3=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{Critical 3=[[@{rebellion}]]}}">Attack x3</button>
-                        <button type="roll" name="roll-meleeweapon-repeating-4" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage 1=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 2=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 3=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 4=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{Critical 3=[[@{rebellion}]]}} {{Critical 4=[[@{rebellion}]]}}">Attack x4</button>
+                        <button type="roll" name="roll-meleeweapon-repeating-1" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}}">Attack x1</button>
+                        <button type="roll" name="roll-meleeweapon-repeating-2" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage 1=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 2=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}}">Attack x2</button>
+                        <button type="roll" name="roll-meleeweapon-repeating-3" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage 1=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 2=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 3=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{Critical 3=[[@{rebellion}]]}}">Attack x3</button>
+                        <button type="roll" name="roll-meleeweapon-repeating-4" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{meleeweapon-repeating-name}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Attack 4=[[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{meleeweapon-repeating-type} + @{sukukaja}]]}} {{Damage 1=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 2=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 3=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Damage 4=[[1d8 + @{strength} - @{meleeweapon-repeating-type} + @{tarukaja} + @{meleeweapon-repeating-bonus}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{Critical 3=[[@{rebellion}]]}} {{Critical 4=[[@{rebellion}]]}}">Attack x4</button>
 
                     </div>
 
@@ -1248,10 +1248,10 @@
                             <option value="Equipped">Equipped</option>
                         </select>
 
-                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x1</button>
-                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 2=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x2</button>
-                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 2=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 3=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x3</button>
-                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] [[3d6 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 2=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 4=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x4</button>
+                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x1</button>
+                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 2=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x2</button>
+                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 2=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 3=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{Critical 3=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x3</button>
+                        <button type="roll" name="roll-firearm-repeating" class="sheet-colouredheader-red" value="&{template:custom} {{color=red}} {{title=@{firearm-repeating-name} +@{firearm-repeating-bonus}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] [[1d20 + @{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 2=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 3=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}} {{Damage 4=[[@{firearm-repeating-dice} + @{firearm-repeating-bonus} + @{tarukaja}]]}}  {{Luck=[[@{luck}]]}} {{Critical 1=[[@{rebellion}]]}} {{Critical 2=[[@{rebellion}]]}} {{Critical 3=[[@{rebellion}]]}} {{Critical 4=[[@{rebellion}]]}} {{desc=@{firearm-repeating-type}}}">Attack x4</button>
 
                     </div>
 
@@ -1562,7 +1562,7 @@
                     <span class="attr" name="attr_agility" title="@{agility_mod}" class="combat-stat-span-4" style="background-color:#f2f2f2; text-align:center; font-weight:bold; font-size:20px;">0</span>
 
                     <label style="background-color:rgb(36, 36, 36); text-align:center; color:red;">INITIATIVE:</label>
-                    <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[3d6 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
+                    <button type="roll" name="roll_initiative" value="&{template:custom} {{title=Initiative}} {{Total=[[1d20 + @{initiative-bonus} &{tracker}]]}} {{color=villain}}">Roll for Initiative!</button>
 
                 </div>
 
@@ -1591,7 +1591,7 @@
                     <label style="background-color:rgb(161, 155, 71); text-align:center; color:white;">Rebellion</label>
 
                     <select name="attr_tarukaja" style="background-color:rgb(221, 117, 117); text-align:center; color:white;">
-                        <option value="0">None</option>
+                        <option value="0">-</option>
                         <option value="4">Tarukaja x1</option>
                         <option value="8">Tarukaja x2</option>
                         <option value="12">Tarukaja x3</option>
@@ -1607,7 +1607,7 @@
                     </div>
 
                     <select name="attr_rakukaja" style="background-color:rgb(206, 131, 224); text-align:center; color:white;">
-                        <option value="0">None</option>
+                        <option value="0">-</option>
                         <option value="4">Rakukaja x1</option>
                         <option value="8">Rakukaja x2</option>
                         <option value="12">Rakukaja x3</option>
@@ -1623,7 +1623,7 @@
                     </div>
 
                     <select name="attr_sukukaja" style="background-color:rgb(131, 212, 165); text-align:center; color:white;">
-                        <option value="0">None</option>
+                        <option value="0">-</option>
                         <option value="1">Sukukaja x1</option>
                         <option value="2">Sukukaja x2</option>
                         <option value="3">Sukukaja x3</option>
@@ -1639,7 +1639,7 @@
                     </div>
 
                     <select name="attr_rebellion" style="background-color:rgb(216, 210, 129); text-align:center; color:white;">
-                        <option value="0">None</option>
+                        <option value="0">-</option>
                         <option value="1d10">Rebellion x1</option>
                         <option value="2d10">Rebellion x2</option>
                         <option value="3d10">Rebellion x3</option>
@@ -1673,26 +1673,26 @@
                     <select name="attr_status-condition-1" style="background-color:#725a78; color:white;">
                         <option value="">Condition?</option>
                         <option value="[~Downed~] You are knocked off balance onto the ground. Your movement speed is reduced to 0 feet. Additionally, creatures who hit you with an attack while you are Downed may add their Luck stat to the damage roll. You recover from being Downed at the start of your turn. When a creature becomes Downed, they recover from all other conditions.">Downed</option>
-                        <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the end of each of your turns.">Burn</option>
-                        <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Freeze</option>
-                        <option value="[~Shock~] Electricity paralyzes you. You are Weak to Physical and Nuke attacks, and cannot use Turns. If a creature hits you with a basic Melee Attack or a Physical Skill and you are Shocked, the attacker is inflicted with Shock.">Shock</option>
-                        <option value="[~Dizzy~] Your eyes are blinded and your mind bewildered. You are Weak to all attacks, and you have disadvantage on all attack rolls. You recover from this Condition at the end of your turn.">Dizzy</option>
-                        <option value="[~Forget~] Your mind is wiped clean and you freeze in the moment. You are Weak to Psychic attacks, and cannot use Skills. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Forget</option>
-                        <option value="[~Sleep~] Drowsiness takes hold, and you fall down. You are Weak to all attacks, and cannot use Turns. When you are inflicted with this Condition by a hostile attack, you regain 1d8 + your level Hit Points and Spell Points.">Sleep</option>
-                        <option value="[~Poison~] Malignant venom causes harm to your body. You receive 1d8 + your level almighty damage at the end of each of your turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Poison</option>
-                        <option value="[~Confuse~] Madness has briefly taken hold of you. You are Weak to Psychic attacks, and you must roll 1d4 at the start of your turn to determine your behavior for the turn (consuming all Turns):
+                        <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the start of each of your turns.">Burn</option>
+                        <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the end of your turn, you recover from Freeze.">Freeze</option>
+                        <option value="[~Shock~] Electricity paralyzes you. You are Weak to Physical and Nuke attacks, and cannot use Turns. If a creature hits you with a Basic Melee Attack or a Physical Skill and you are Shocked, the attacker is inflicted with Shock. You recover from Shock at the end of your turn.">Shock</option>
+                        <option value="[~Dizzy~] Your eyes are blinded and your mind bewildered. You have disadvantage on all attack rolls.">Dizzy</option>
+                        <option value="[~Forget~] Your mind is wiped clean and you freeze in the moment. You are Weak to Psychic attacks, and cannot use Skills.">Forget</option>
+                        <option value="[~Sleep~] Drowsiness takes hold, and you fall down. You are Weak to all attacks (this does NOT make you Weak to any Conditions), and cannot use Turns. When you are inflicted with this Condition by a hostile attack, you regain 1d8 + your level Hit Points and Spell Points. At the start of your turn, you recover from Sleep.">Sleep</option>
+                        <option value="[~Poison~] Malignant venom causes harm to your body. You receive 1d8 + your level almighty damage at the start of each of your turns.">Poison</option>
+                        <option value="[~Confuse~] Madness has briefly taken hold of you. You are Weak to Psychic attacks, and you must roll 1d4 at the start of your turn to determine your behavior for the turn:
 
                         1 - You throw away Macca equal to one-hundred times your level. If a hostile NPC does this, instead all player characters gain Macca equal to one-hundred times the NPCs level.
                         
-                        2 - You spend your turn to use a Skill that benefits an enemy creature (such as a Dia type Skill, or a Tarukaja, Rakukaja, or Sukukaja type Skill) or debilitating an ally. It cannot deal damage. If none are available or able to be cast, your turn ends.
+                        2 - Your turn ends immediately.
                         
-                        3 - Your turn ends immediately.
+                        3 - Your may act normally.
                         
                         4 - You recover from the Condition.">Confuse</option>
-                        <option value="[~Fear~] Crippling fear seizes your spirit. You are Weak to Psychic attacks. At the start of your turn, roll 1d4. On a 1, your turn immediately ends. On a 4, you recover from the Condition.">Fear</option>
-                        <option value="[~Despair~] Dread and absolute despondency seize you. You are Weak to Psychic attacks, and you cannot use Turns. At the start of your turn, flip a coin. If heads, you recover from the Condition. At the end of your turn, you lose 1d8 + your level Spell Points.">Despair</option>
-                        <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making basic Melee attacks against them. Damage dealt by your basic Melee attacks is doubled. All attack rolls made by you are made with disadvantage. At the start of your turn, roll 1d4. On a 4, you recover from the Condition.">Rage</option>
-                        <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and your Turns are determined by the creature that Brainwashed you. At the start of your turn, flip a coin. If heads, you recover from the Condition.">Brainwash</option>
+                        <option value="[~Fear~] Crippling fear seizes your spirit. You are Weak to Psychic attacks. You cannot willingly move towards the source of your Fear, and you cannot make Basic Melee Attacks.">Fear</option>
+                        <option value="[~Despair~] Dread and absolute despondency seize you. You are Weak to Psychic attacks, and you cannot use Turns. At the start of your turn, you lose 1d8 + your level Spell Points. If this reduces you to 0 Spell Points or below, you are instantly reduced to 0 Hit Points. At the end of your turn, you recover from Despair.">Despair</option>
+                        <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making Basic Melee attacks against them. You deal twice as much damage while afflicted with Rage. At the end of your turn, you recover from Rage.">Rage</option>
+                        <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest ally creature and making Basic Melee attacks against them. If you are alone in the Initiative, you simply cannot use Turns. At the end of your turn, you recover from Brainwash.">Brainwash</option>
                     </select>
 
                     <div style="max-width:5px;">
@@ -1702,26 +1702,26 @@
                     <select name="attr_status-condition-2" style="background-color:#725a78; color:white;">
                         <option value="">Condition?</option>
                         <option value="[~Downed~] You are knocked off balance onto the ground. Your movement speed is reduced to 0 feet. Additionally, creatures who hit you with an attack while you are Downed may add their Luck stat to the damage roll. You recover from being Downed at the start of your turn. When a creature becomes Downed, they recover from all other conditions.">Downed</option>
-                        <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the end of each of your turns.">Burn</option>
-                        <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Freeze</option>
-                        <option value="[~Shock~] Electricity paralyzes you. You are Weak to Physical and Nuke attacks, and cannot use Turns. If a creature hits you with a basic Melee Attack or a Physical Skill and you are Shocked, the attacker is inflicted with Shock.">Shock</option>
-                        <option value="[~Dizzy~] Your eyes are blinded and your mind bewildered. You are Weak to all attacks, and you have disadvantage on all attack rolls. You recover from this Condition at the end of your turn.">Dizzy</option>
-                        <option value="[~Forget~] Your mind is wiped clean and you freeze in the moment. You are Weak to Psychic attacks, and cannot use Skills. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Forget</option>
-                        <option value="[~Sleep~] Drowsiness takes hold, and you fall down. You are Weak to all attacks, and cannot use Turns. When you are inflicted with this Condition by a hostile attack, you regain 1d8 + your level Hit Points and Spell Points.">Sleep</option>
-                        <option value="[~Poison~] Malignant venom causes harm to your body. You receive 1d8 + your level almighty damage at the end of each of your turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Poison</option>
-                        <option value="[~Confuse~] Madness has briefly taken hold of you. You are Weak to Psychic attacks, and you must roll 1d4 at the start of your turn to determine your behavior for the turn (consuming all Turns):
+                        <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the start of each of your turns.">Burn</option>
+                        <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the end of your turn, you recover from Freeze.">Freeze</option>
+                        <option value="[~Shock~] Electricity paralyzes you. You are Weak to Physical and Nuke attacks, and cannot use Turns. If a creature hits you with a Basic Melee Attack or a Physical Skill and you are Shocked, the attacker is inflicted with Shock. You recover from Shock at the end of your turn.">Shock</option>
+                        <option value="[~Dizzy~] Your eyes are blinded and your mind bewildered. You have disadvantage on all attack rolls.">Dizzy</option>
+                        <option value="[~Forget~] Your mind is wiped clean and you freeze in the moment. You are Weak to Psychic attacks, and cannot use Skills.">Forget</option>
+                        <option value="[~Sleep~] Drowsiness takes hold, and you fall down. You are Weak to all attacks (this does NOT make you Weak to any Conditions), and cannot use Turns. When you are inflicted with this Condition by a hostile attack, you regain 1d8 + your level Hit Points and Spell Points. At the start of your turn, you recover from Sleep.">Sleep</option>
+                        <option value="[~Poison~] Malignant venom causes harm to your body. You receive 1d8 + your level almighty damage at the start of each of your turns.">Poison</option>
+                        <option value="[~Confuse~] Madness has briefly taken hold of you. You are Weak to Psychic attacks, and you must roll 1d4 at the start of your turn to determine your behavior for the turn:
 
                         1 - You throw away Macca equal to one-hundred times your level. If a hostile NPC does this, instead all player characters gain Macca equal to one-hundred times the NPCs level.
                         
-                        2 - You spend your turn to use a Skill that benefits an enemy creature (such as a Dia type Skill, or a Tarukaja, Rakukaja, or Sukukaja type Skill) or debilitating an ally. It cannot deal damage. If none are available or able to be cast, your turn ends.
+                        2 - Your turn ends immediately.
                         
-                        3 - Your turn ends immediately.
+                        3 - Your may act normally.
                         
                         4 - You recover from the Condition.">Confuse</option>
-                        <option value="[~Fear~] Crippling fear seizes your spirit. You are Weak to Psychic attacks. At the start of your turn, roll 1d4. On a 1, your turn immediately ends. On a 4, you recover from the Condition.">Fear</option>
-                        <option value="[~Despair~] Dread and absolute despondency seize you. You are Weak to Psychic attacks, and you cannot use Turns. At the start of your turn, flip a coin. If heads, you recover from the Condition. At the end of your turn, you lose 1d8 + your level Spell Points.">Despair</option>
-                        <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making basic Melee attacks against them. Damage dealt by your basic Melee attacks is doubled. All attack rolls made by you are made with disadvantage. At the start of your turn, roll 1d4. On a 4, you recover from the Condition.">Rage</option>
-                        <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and your Turns are determined by the creature that Brainwashed you. At the start of your turn, flip a coin. If heads, you recover from the Condition.">Brainwash</option>
+                        <option value="[~Fear~] Crippling fear seizes your spirit. You are Weak to Psychic attacks. You cannot willingly move towards the source of your Fear, and you cannot make Basic Melee Attacks.">Fear</option>
+                        <option value="[~Despair~] Dread and absolute despondency seize you. You are Weak to Psychic attacks, and you cannot use Turns. At the start of your turn, you lose 1d8 + your level Spell Points. If this reduces you to 0 Spell Points or below, you are instantly reduced to 0 Hit Points. At the end of your turn, you recover from Despair.">Despair</option>
+                        <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making Basic Melee attacks against them. You deal twice as much damage while afflicted with Rage. At the end of your turn, you recover from Rage.">Rage</option>
+                        <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest ally creature and making Basic Melee attacks against them. If you are alone in the Initiative, you simply cannot use Turns. At the end of your turn, you recover from Brainwash.">Brainwash</option>
                     </select>
 
                     <div style="max-width:5px;">
@@ -1731,26 +1731,26 @@
                     <select name="attr_status-condition-3" style="background-color:#725a78; color:white;">
                         <option value="">Condition?</option>
                         <option value="[~Downed~] You are knocked off balance onto the ground. Your movement speed is reduced to 0 feet. Additionally, creatures who hit you with an attack while you are Downed may add their Luck stat to the damage roll. You recover from being Downed at the start of your turn. When a creature becomes Downed, they recover from all other conditions.">Downed</option>
-                        <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the end of each of your turns.">Burn</option>
-                        <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Freeze</option>
-                        <option value="[~Shock~] Electricity paralyzes you. You are Weak to Physical and Nuke attacks, and cannot use Turns. If a creature hits you with a basic Melee Attack or a Physical Skill and you are Shocked, the attacker is inflicted with Shock.">Shock</option>
-                        <option value="[~Dizzy~] Your eyes are blinded and your mind bewildered. You are Weak to all attacks, and you have disadvantage on all attack rolls. You recover from this Condition at the end of your turn.">Dizzy</option>
-                        <option value="[~Forget~] Your mind is wiped clean and you freeze in the moment. You are Weak to Psychic attacks, and cannot use Skills. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Forget</option>
-                        <option value="[~Sleep~] Drowsiness takes hold, and you fall down. You are Weak to all attacks, and cannot use Turns. When you are inflicted with this Condition by a hostile attack, you regain 1d8 + your level Hit Points and Spell Points.">Sleep</option>
-                        <option value="[~Poison~] Malignant venom causes harm to your body. You receive 1d8 + your level almighty damage at the end of each of your turns. At the start of your turn, roll 1d4. On a 4, you recover from this Condition.">Poison</option>
-                        <option value="[~Confuse~] Madness has briefly taken hold of you. You are Weak to Psychic attacks, and you must roll 1d4 at the start of your turn to determine your behavior for the turn (consuming all Turns):
+                        <option value="[~Burn~] Severe burns raze you. While Burned, you are Weak to Wind and Nuke attacks, and receive 1d8 + your level almighty damage at the start of each of your turns.">Burn</option>
+                        <option value="[~Freeze~] Chills freeze you solid. You are Weak to Physical and Nuke attacks, and cannot use Turns. At the end of your turn, you recover from Freeze.">Freeze</option>
+                        <option value="[~Shock~] Electricity paralyzes you. You are Weak to Physical and Nuke attacks, and cannot use Turns. If a creature hits you with a Basic Melee Attack or a Physical Skill and you are Shocked, the attacker is inflicted with Shock. You recover from Shock at the end of your turn.">Shock</option>
+                        <option value="[~Dizzy~] Your eyes are blinded and your mind bewildered. You have disadvantage on all attack rolls.">Dizzy</option>
+                        <option value="[~Forget~] Your mind is wiped clean and you freeze in the moment. You are Weak to Psychic attacks, and cannot use Skills.">Forget</option>
+                        <option value="[~Sleep~] Drowsiness takes hold, and you fall down. You are Weak to all attacks (this does NOT make you Weak to any Conditions), and cannot use Turns. When you are inflicted with this Condition by a hostile attack, you regain 1d8 + your level Hit Points and Spell Points. At the start of your turn, you recover from Sleep.">Sleep</option>
+                        <option value="[~Poison~] Malignant venom causes harm to your body. You receive 1d8 + your level almighty damage at the start of each of your turns.">Poison</option>
+                        <option value="[~Confuse~] Madness has briefly taken hold of you. You are Weak to Psychic attacks, and you must roll 1d4 at the start of your turn to determine your behavior for the turn:
 
                         1 - You throw away Macca equal to one-hundred times your level. If a hostile NPC does this, instead all player characters gain Macca equal to one-hundred times the NPCs level.
                         
-                        2 - You spend your turn to use a Skill that benefits an enemy creature (such as a Dia type Skill, or a Tarukaja, Rakukaja, or Sukukaja type Skill) or debilitating an ally. It cannot deal damage. If none are available or able to be cast, your turn ends.
+                        2 - Your turn ends immediately.
                         
-                        3 - Your turn ends immediately.
+                        3 - Your may act normally.
                         
                         4 - You recover from the Condition.">Confuse</option>
-                        <option value="[~Fear~] Crippling fear seizes your spirit. You are Weak to Psychic attacks. At the start of your turn, roll 1d4. On a 1, your turn immediately ends. On a 4, you recover from the Condition.">Fear</option>
-                        <option value="[~Despair~] Dread and absolute despondency seize you. You are Weak to Psychic attacks, and you cannot use Turns. At the start of your turn, flip a coin. If heads, you recover from the Condition. At the end of your turn, you lose 1d8 + your level Spell Points.">Despair</option>
-                        <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making basic Melee attacks against them. Damage dealt by your basic Melee attacks is doubled. All attack rolls made by you are made with disadvantage. At the start of your turn, roll 1d4. On a 4, you recover from the Condition.">Rage</option>
-                        <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and your Turns are determined by the creature that Brainwashed you. At the start of your turn, flip a coin. If heads, you recover from the Condition.">Brainwash</option>
+                        <option value="[~Fear~] Crippling fear seizes your spirit. You are Weak to Psychic attacks. You cannot willingly move towards the source of your Fear, and you cannot make Basic Melee Attacks.">Fear</option>
+                        <option value="[~Despair~] Dread and absolute despondency seize you. You are Weak to Psychic attacks, and you cannot use Turns. At the start of your turn, you lose 1d8 + your level Spell Points. If this reduces you to 0 Spell Points or below, you are instantly reduced to 0 Hit Points. At the end of your turn, you recover from Despair.">Despair</option>
+                        <option value="[~Rage~] Your blood boils hot and seeps in fury. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest enemy creature and making Basic Melee attacks against them. You deal twice as much damage while afflicted with Rage. At the end of your turn, you recover from Rage.">Rage</option>
+                        <option value="[~Brainwash~] Your mind is no longer your own. You are Weak to Psychic attacks, and you must spend all of your Turns moving towards the nearest ally creature and making Basic Melee attacks against them. If you are alone in the Initiative, you simply cannot use Turns. At the end of your turn, you recover from Brainwash.">Brainwash</option>
                     </select>
 
                     <div style="max-width:5px;">
@@ -1808,15 +1808,15 @@
                         <input readonly type="number" name="attr_skill-repeating-cost" value="0"/>
                         <input readonly type="text" name="attr_skill-repeating-short-description" value="???"/>
 
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical Buffs=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x1</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{Attack=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{desc=@{skill-repeating-description}}}">No Damage</button>
                         <div>
                             &nbsp;
                         </div>
 
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
-                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[3d6 + @{npcaccuracymod} + @{sukukaja}]] or [[3d6+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{HP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{strength} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Physical/Gun x4</button>
+                        <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=@{skill-repeating-cost}}} {{Range=@{skill-repeating-range}}} {{Attack 1=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 2=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 3=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Attack 4=[[1d20 + @{npcaccuracymod} + @{sukukaja}]] or [[1d20+@{npcaccuracymod} + @{sukukaja}]]}} {{Damage 1=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 2=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 3=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Damage 4=[[@{skill-repeating-dice} + @{magic} + @{tarukaja} + @{skill-repeating-potential}]]}} {{Luck=[[@{luck}]]}} {{Critical 1=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 2=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 3=[[@{skill-repeating-critical} + @{rebellion}]]}} {{Critical 4=[[@{skill-repeating-critical} + @{rebellion}]]}} {{desc=@{skill-repeating-description}}}">Magic x4</button>
                         <button type="roll" name="roll-skill-repeating" class="sheet-colouredheader-purple" style="max-height:15px;" value="&{template:custom} {{color=purple}} {{title=@{skill-repeating-name} +@{skill-repeating-potential}}} {{subtitle=@{skill-repeating-type}}} {{SP Cost=[[@{skill-repeating-cost} - @{skill-repeating-potential}]]}} {{Range=@{skill-repeating-range}}} {{desc=@{skill-repeating-description}}}">No Attack</button>
 
                         <select name="attr_skill-repeating-potential" class="ptype" style="display:none;">
@@ -1859,12 +1859,26 @@
 
                 </fieldset>
 
-                <h3>Affinities</h3>
+                <h3>Damage Affinities</h3>
                 <!-- START OF AFFINITIES SECTION -->
 
                 <div class="sheet-box" style="background-color:black;">
 
                     <div class="top-header-grid" style="padding-top:10px; padding-bottom:10px;">
+
+                        <button type="roll" name="roll-damageaffinitysummary" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{character-name}}} {{subtitle=@{pronouns}}} {{Physical=@{affinity-physical}}} {{Gun=@{affinity-gun}}} {{Fire=@{affinity-fire}}} {{Ice=@{affinity-ice}}} {{Electric=@{affinity-electric}}} {{Wind=@{affinity-wind}}} {{Psychic=@{affinity-psychic}}} {{Nuke=@{affinity-nuke}}} {{Bless=@{affinity-bless}}} {{Curse=@{affinity-curse}}} {{Almighty=@{affinity-almighty}}}">Send to Chat!</button>
+                        <div>
+                            &nbsp;
+                        </div>
+                        <div>
+                            &nbsp;
+                        </div>
+                        <div>
+                            &nbsp;
+                        </div>
+                        <div>
+                            &nbsp;
+                        </div>
 
                             <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/902997898566979614/physical_icon.png"/>    
                             <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/903058361090703440/gun_icon.png"/>
@@ -1881,7 +1895,7 @@
 
 
                             <select name="attr_affinity-physical" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1890,7 +1904,7 @@
                             </select>
     
                             <select name="attr_affinity-gun" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1899,7 +1913,7 @@
                             </select>
     
                             <select name="attr_affinity-fire" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1908,7 +1922,7 @@
                             </select>
     
                             <select name="attr_affinity-ice" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1917,7 +1931,7 @@
                             </select>
     
                             <select name="attr_affinity-electric" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1939,7 +1953,7 @@
                         <label style="background-color:red; font-weight:bold; color:white; text-align:center;">Curse</label>
 
                             <select name="attr_affinity-wind" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1948,7 +1962,7 @@
                             </select>
     
                             <select name="attr_affinity-psychic" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1957,7 +1971,7 @@
                             </select>
     
                             <select name="attr_affinity-nuke" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1966,7 +1980,7 @@
                             </select>
     
                             <select name="attr_affinity-bless" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
@@ -1975,13 +1989,209 @@
                             </select>
     
                             <select name="attr_affinity-curse" style="text-align:center; font-weight:bold;">
-                                <option value="NONE">-</option>
+                                <option value="-">-</option>
                                 <option value="WEAK">WEAK</option>
                                 <option value="RESIST">RESIST</option>
                                 <option value="BLOCK">BLOCK</option>
                                 <option value="DRAIN">DRAIN</option>
                                 <option value="REPEL">REPEL</option>
                             </select>
+
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971479967982567494/almighty_icon.png"/>    
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+
+                            <label style="background-color:gray; font-weight:bold; text-align:center; color:white;">Almighty</label>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+
+                            <select name="attr_affinity-almighty" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                            </select>
+
+                    </div>
+
+                </div>
+
+                <h3>Condition Affinities</h3>
+
+                <div class="sheet-box" style="background-color:black;">
+
+                    <div class="top-header-grid" style="padding-top:10px; padding-bottom:10px;">
+
+                            <!-- Start of Condition Affinities + Almighty -->
+
+                            <button type="roll" name="roll-conditionaffinitysummary" class="sheet-colouredheader-purple" value="&{template:custom} {{color=purple}} {{title=@{character-name}}} {{subtitle=@{pronouns}}} {{Burn=@{affinity-burn}}} {{Freeze=@{affinity-freeze}}} {{Shock=@{affinity-shock}}} {{Dizzy=@{affinity-dizzy}}} {{Forget=@{affinity-forget}}} {{Sleep=@{affinity-sleep}}} {{Poison=@{affinity-poison}}} {{Confuse=@{affinity-confuse}}} {{Fear=@{affinity-fear}}} {{Despair=@{affinity-despair}}} {{Rage=@{affinity-rage}}} {{Brainwash=@{affinity-brainwash}}}">Send to Chat!</button>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971465769265279027/burn_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971465801712402482/freeze_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971465835598213170/shock_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971465873384669295/dizzy_icon.png"/>   
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971465931761020978/forget_icon.png"/>     
+
+                            <label style="background-color:Orange; font-weight:bold; text-align:center;">Burn</label>
+                            <label style="background-color:Aqua; font-weight:bold; text-align:center;">Freeze</label>
+                            <label style="background-color:Yellow; font-weight:bold; text-align:center;">Shock</label>
+                            <label style="background-color:Lightyellow; font-weight:bold; text-align:center;">Dizzy</label>
+                            <label style="background-color:turquoise; font-weight:bold; text-align:center;">Forget</label>
+
+                            <select name="attr_affinity-burn" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-freeze" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-shock" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-dizzy" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-forget" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971465992146411590/sleep_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971466023612084314/poison_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971466132601053224/confuse_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971466160203788368/fear_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971466175789813850/despair_icon.png"/>    
+
+                            <label style="background-color:Lightgray; font-weight:bold; text-align:center;">Sleep</label>
+                            <label style="background-color:#bd4bf8; font-weight:bold; text-align:center;">Poison</label>
+                            <label style="background-color:#ffca18; font-weight:bold; text-align:center;">Confuse</label>
+                            <label style="background-color:Violet; font-weight:bold; text-align:center;">Fear</label>
+                            <label style="background-color:Purple; font-weight:bold; text-align:center; color:white;">Despair</label>
+
+
+                            <select name="attr_affinity-sleep" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-poison" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-confuse" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-fear" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-despair" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971466201869996052/rage_icon.png"/>    
+                            <img class="skill-potential-image" src="https://cdn.discordapp.com/attachments/900199385370071080/971466225878179850/brainwash_icon.png"/>    
+
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+
+                            <label style="background-color:Red; font-weight:bold; text-align:center; color:white;">Rage</label>
+                            <label style="background-color:#fb00ff; font-weight:bold; text-align:center; color:white;">Brainwash</label>
+
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+                            <div>
+                                &nbsp;
+                            </div>
+
+                            <select name="attr_affinity-rage" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
+                            <select name="attr_affinity-brainwash" style="text-align:center; font-weight:bold;">
+                                <option value="-">-</option>
+                                <option value="WEAK">WEAK</option>
+                                <option value="RESIST">RESIST</option>
+                                <option value="BLOCK">BLOCK</option>
+                            </select>
+
 
 
                     </div>
